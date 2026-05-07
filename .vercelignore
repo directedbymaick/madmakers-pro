@@ -1,0 +1,25 @@
+# Dev-only utilities — never ship these to production
+serve.py
+faststart.py
+
+# Backup / non-faststart video files - keep them locally, don't deploy
+assets/*.bk.mp4
+assets/*.original.mp4
+assets/hero-video-loop (2).mp4
+assets/cosmos_*.mp4
+assets/footer video loop.bk.mp4
+assets/montage-hero-background-loop.mp4
+
+# Editor / OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local user uploads (if any)
+uploads/
+
+# Skills folder (local development docs)
+skills/

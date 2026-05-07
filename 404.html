@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 - Page introuvable · Mad Makers</title>
+<meta name="description" content="Cette page n'existe pas. Retour à l'accueil de Mad Makers." />
+<meta name="robots" content="noindex,follow" />
+<meta name="theme-color" content="#0c0d0a" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* 404-specific layout - full viewport, centred, hero-style background */
+  body{
+    min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:80px 32px;text-align:center;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 30%, rgba(200,255,61,0.40), transparent 60%),
+      radial-gradient(ellipse 60% 80% at 90% 50%, rgba(158,212,32,0.30), transparent 65%),
+      radial-gradient(ellipse 70% 70% at 10% 70%, rgba(90,122,13,0.45), transparent 65%),
+      linear-gradient(180deg, #2d3d0a 0%, #0c0d0a 100%);
+    position:relative;overflow:hidden;
+  }
+  body::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(241,236,224,0.12) 1px, transparent 1px);
+    background-size:28px 28px;
+    mask-image:radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 75%);
+    opacity:.5;
+  }
+  body::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse at 50% 100%, transparent 35%, rgba(12,13,10,0.92) 85%);
+  }
+  .err-wrap{position:relative;z-index:1;max-width:680px}
+  .err-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;
+    text-transform:uppercase;color:var(--fg);
+    margin-bottom:30px;
+  }
+  .err-eyebrow .sq{width:8px;height:8px;background:var(--fg)}
+  .err-code{
+    font-family:var(--serif);font-weight:400;font-style:italic;
+    font-size:clamp(120px, 22vw, 220px);line-height:0.85;letter-spacing:-0.04em;
+    background:linear-gradient(95deg, var(--lime) 0%, var(--lime) 55%, rgba(241,236,224,0.45) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:18px;
+  }
+  .err-title{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(28px, 4.5vw, 48px);line-height:1.1;letter-spacing:-0.02em;
+    color:var(--cream);text-wrap:balance;
+    margin-bottom:18px;
+  }
+  .err-sub{
+    color:var(--fg-dim);font-size:16px;line-height:1.55;
+    max-width:520px;margin:0 auto 36px;
+  }
+  .err-actions{display:inline-flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center}
+  .err-actions .link{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:13px;letter-spacing:0.10em;text-transform:uppercase;
+    color:var(--cream);border-bottom:1px solid var(--line-2);padding-bottom:4px;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .err-actions .link:hover{color:var(--lime);border-color:var(--lime)}
+  .err-actions .link .turn{color:var(--lime)}
+</style>
+</head>
+<body>
+  <div class="err-wrap">
+    <div class="err-eyebrow"><span class="sq"></span> ERREUR 404</div>
+    <div class="err-code">404</div>
+    <h1 class="err-title">Cette page n'existe pas - <em style="font-style:italic">on l'a peut-être déplacée.</em></h1>
+    <p class="err-sub">Désolé pour le détour. Vous pouvez revenir à l'accueil ou nous écrire si vous cherchiez quelque chose de précis.</p>
+    <div class="err-actions">
+      <a class="link" href="/">↳ Retour à l'accueil <span class="turn">↗</span></a>
+      <a class="link" href="mailto:contact@mad-makers.fr">↳ Nous écrire <span class="turn">↗</span></a>
+    </div>
+  </div>
+</body>
+</html>

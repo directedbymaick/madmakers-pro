@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/*.bk.mp4$
+Disallow: /assets/*.original.mp4$
+
+Sitemap: https://www.mad-makers.fr/pro/sitemap.xml

@@ -1,0 +1,29 @@
+# Heavy / backup video files - keep local only, don't push to git
+# (the active hero-video-loop.mp4 and footer video loop.mp4 ARE tracked)
+assets/*.bk.mp4
+assets/*.original.mp4
+assets/hero-video-loop (2).mp4
+assets/cosmos_*.mp4
+assets/montage-hero-background-loop.mp4
+
+# Local user-side image dumps - not part of the production build
+uploads/
+
+# Local development docs / skills (Claude Code authoring helpers)
+skills/
+
+# Dependencies (none currently, future-proof)
+node_modules/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
