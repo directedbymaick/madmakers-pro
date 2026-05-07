@@ -21,6 +21,9 @@ node_modules/
 *.swp
 *.swo
 
+# Claude Code local config (CLI permissions, not relevant to deployment)
+.claude/
+
 # OS junk
 .DS_Store
 Thumbs.db
