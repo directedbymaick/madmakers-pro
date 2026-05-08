@@ -1,158 +1,300 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Mentions légales - Mad Makers</title>
-<meta name="description" content="Mentions légales du site Mad Makers - éditeur, hébergeur, propriété intellectuelle."/>
-<meta name="robots" content="index,follow"/>
-<link rel="canonical" href="https://www.mad-makers.fr/mentions-legales.html"/>
-<meta name="theme-color" content="#0a0a0a"/>
+<title>Mentions légales — Mad Makers Pro</title>
+<meta name="description" content="Mentions légales du site Mad Makers Pro — éditeur, hébergeur, propriété intellectuelle." />
+<meta name="robots" content="index,follow" />
+<meta name="theme-color" content="#0c0d0a" />
+<link rel="canonical" href="https://pro.mad-makers.fr/mentions-legales.html" />
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
-<link rel="preconnect" href="https://fonts.bunny.net" crossorigin/>
-<link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+<link rel="stylesheet" href="styles.css" />
 
 <style>
-  :root{
-    --bg:#0a0a0a;--ink:#fff;--dim:#888;--soft:#c8c8c8;--line:#1f1f1f;
-    --green:#39ff14;
-    --mono:"JetBrains Mono",ui-monospace,monospace;
-    --display:"Archivo Black",system-ui,sans-serif;
-    --sans:"Inter",system-ui,sans-serif;
+  /* Page-local styling — reuses the global tokens (--bg, --cream, --lime,
+     --serif, --sans, --mono) defined in styles.css for visual coherence
+     with the rest of Mad Makers Pro. */
+  .legal-page{
+    background:var(--bg);
+    color:var(--fg);
+    min-height:100vh;
+    padding:160px 32px 80px;
+    position:relative;
+    overflow:hidden;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  ::selection{background:var(--green);color:#000}
+  .legal-page::before{
+    content:"";
+    position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 80% 40% at 50% 0%, rgba(200,255,61,0.08), transparent 60%),
+      radial-gradient(ellipse 60% 30% at 50% 100%, rgba(200,255,61,0.04), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .legal-wrap{
+    max-width:880px;margin:0 auto;
+    position:relative;z-index:1;
+  }
+  .legal-head{
+    margin-bottom:80px;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--line);
+  }
+  .legal-head h1{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(44px, 6.5vw, 86px);
+    line-height:1.02;letter-spacing:-0.02em;
+    color:var(--cream);
+    margin-top:24px;
+    text-wrap:balance;
+  }
+  .legal-head h1 em{
+    font-style:italic;
+    background:linear-gradient(95deg, var(--lime) 0%, var(--lime) 50%, rgba(241,236,224,0.4) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .legal-meta{
+    margin-top:24px;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;
+    text-transform:uppercase;color:var(--fg-mute);
+  }
 
-  .nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:16px 28px;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);font:500 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-  .nav .logo{font:900 13px/1 var(--display);color:#fff;letter-spacing:.04em}
-  .nav .logo .g{color:var(--green)}
-  .nav .back{transition:color .2s ease}
-  .nav .back::before{content:"← ";color:var(--green)}
-  .nav .back:hover{color:var(--green)}
+  .legal-section{
+    margin-top:64px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+  .legal-section:first-of-type{border-top:none;padding-top:0;margin-top:0}
+  .legal-section h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(26px, 3vw, 38px);
+    line-height:1.1;letter-spacing:-0.01em;
+    color:var(--cream);
+    margin-bottom:24px;
+    display:flex;align-items:baseline;gap:18px;
+  }
+  .legal-section h2 .num{
+    font-family:var(--mono);font-weight:500;font-size:11px;
+    letter-spacing:0.22em;color:var(--lime);
+    flex-shrink:0;
+  }
+  .legal-section p{
+    font-family:var(--sans);font-size:15px;line-height:1.7;
+    color:var(--fg-dim);
+    margin-bottom:14px;
+    max-width:68ch;
+  }
+  .legal-section p strong{color:var(--cream);font-weight:500}
+  .legal-section ul{
+    list-style:none;padding:0;margin:14px 0;
+  }
+  .legal-section ul li{
+    font-family:var(--sans);font-size:15px;line-height:1.7;
+    color:var(--fg-dim);
+    padding-left:22px;position:relative;
+    margin-bottom:8px;
+  }
+  .legal-section ul li::before{
+    content:"→";position:absolute;left:0;top:0;
+    color:var(--lime);font-family:var(--mono);font-weight:500;
+  }
+  .legal-section ul li strong{color:var(--cream);font-weight:500}
+  .legal-section a.link{
+    color:var(--lime);
+    border-bottom:1px solid rgba(200,255,61,0.4);
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .legal-section a.link:hover{color:var(--cream);border-color:var(--cream)}
 
-  main{max-width:880px;margin:0 auto;padding:140px 40px 80px}
-
-  .head{margin-bottom:60px;padding-bottom:32px;border-bottom:1px solid var(--line)}
-  .head .lbl{font:500 11px/1 var(--mono);letter-spacing:.28em;text-transform:uppercase;color:var(--green);margin-bottom:18px}
-  .head h1{font:900 clamp(40px,7vw,80px)/.92 var(--display);text-transform:uppercase;letter-spacing:-.03em;margin-bottom:18px}
-  .head h1 .dot{color:var(--green)}
-  .head .meta{font:500 11px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
-
-  section{margin-bottom:48px}
-  section:last-child{margin-bottom:0}
-  section h2{font:900 clamp(22px,2.6vw,32px)/1 var(--display);text-transform:uppercase;letter-spacing:-.02em;margin-bottom:18px}
-  section h2 .num{color:var(--green);margin-right:14px;font-family:var(--mono);font-weight:500;font-size:.5em;letter-spacing:.2em;vertical-align:middle}
-  section p,section li{font:400 15px/1.65 var(--sans);color:#bbb;margin-bottom:12px}
-  section p strong{color:#fff;font-weight:500}
-  section ul{list-style:none;padding:0}
-  section ul li{padding-left:18px;position:relative}
-  section ul li::before{content:"→";position:absolute;left:0;color:var(--green);font-family:var(--mono)}
-  section a.link{color:var(--green);border-bottom:1px solid var(--green)}
-  section a.link:hover{color:#fff;border-color:#fff}
-
-  .key-row{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid #141414}
-  .key-row:last-child{border-bottom:none}
-  .key-row .k{font:500 10px/1.4 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--green)}
-  .key-row .v{font:400 14px/1.5 var(--sans);color:#fff}
-  .placeholder{display:inline-block;background:rgba(57,255,20,.08);border:1px dashed var(--green);color:var(--green);padding:1px 8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em}
-
-  footer.foot{border-top:1px solid var(--line);padding:30px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font:500 11px/1.4 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-  footer.foot b{color:#fff;font-weight:500}
-  footer.foot a{transition:color .2s ease;margin-left:18px}
-  footer.foot a:hover{color:var(--green)}
+  /* Key-value rows for editor / hosting cards */
+  .legal-card{
+    margin-top:18px;
+    border:1px solid var(--line-2);
+    border-radius:14px;
+    background:rgba(20,21,17,0.4);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    overflow:hidden;
+  }
+  .kv-row{
+    display:grid;grid-template-columns:200px 1fr;gap:24px;
+    padding:16px 22px;
+    border-bottom:1px solid var(--line);
+  }
+  .kv-row:last-child{border-bottom:none}
+  .kv-row .k{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;
+    text-transform:uppercase;color:var(--fg-mute);
+    align-self:center;
+  }
+  .kv-row .v{
+    font-family:var(--sans);font-size:14px;line-height:1.5;
+    color:var(--cream);font-weight:400;
+  }
+  .kv-row .v .muted{color:var(--fg-mute)}
 
   @media (max-width:680px){
-    main{padding:120px 24px 60px}
-    .key-row{grid-template-columns:1fr;gap:4px}
+    .legal-page{padding:140px 22px 60px}
+    .kv-row{grid-template-columns:1fr;gap:4px;padding:14px 18px}
+    .legal-section h2{flex-direction:column;gap:8px}
   }
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <a class="logo" href="/">MAD<span class="g">.</span>MAKERS</a>
-  <a class="back" href="/">Retour à l'accueil</a>
+<!-- ================ NAV (Pro pill) ================ -->
+<nav class="nav" id="nav">
+  <a href="/" class="brand"><span class="mk"></span><span class="brand-name">Mad Makers</span></a>
+  <div class="nav-links">
+    <a href="/#manifeste">Agence</a>
+    <a href="/#services">Services</a>
+    <a href="/#projets">Projets</a>
+    <a href="/#equipe">Fondateurs</a>
+  </div>
+  <a class="nav-cta" href="/">Retour à l'accueil <span class="arrow">↗</span></a>
 </nav>
 
-<main>
+<main class="legal-page">
+  <div class="legal-wrap">
 
-  <header class="head">
-    <div class="lbl">Document légal · LCEN</div>
-    <h1>Mentions légales<span class="dot">.</span></h1>
-    <div class="meta">Dernière mise à jour : 30 / 04 / 2026</div>
-  </header>
+    <header class="legal-head">
+      <div class="eyebrow"><span class="sq"></span> DOCUMENT LÉGAL · LCEN</div>
+      <h1>Mentions <em>légales.</em></h1>
+      <div class="legal-meta">Dernière mise à jour : 30 / 04 / 2026</div>
+    </header>
 
-  <section>
-    <h2><span class="num">01</span>Éditeur du site</h2>
-    <p>Le présent site est édité par :</p>
-    <div class="key-row"><div class="k">Raison sociale</div><div class="v">Sara CANKAYA <span style="color:#888">- exerçant sous le nom commercial</span> <strong>Mad Makers</strong></div></div>
-    <div class="key-row"><div class="k">Forme juridique</div><div class="v">Entrepreneur individuel (EI) - micro-entreprise</div></div>
-    <div class="key-row"><div class="k">Siège social</div><div class="v">6 rue Youri Gagarine, 93230 Romainville, France</div></div>
-    <div class="key-row"><div class="k">SIREN</div><div class="v">832 059 695</div></div>
-    <div class="key-row"><div class="k">SIRET</div><div class="v">832 059 695 00029</div></div>
-    <div class="key-row"><div class="k">N° TVA intra.</div><div class="v">FR12 832059695</div></div>
-    <div class="key-row"><div class="k">Email</div><div class="v"><a class="link" href="mailto:contact@mad-makers.fr">contact@mad-makers.fr</a></div></div>
-    <div class="key-row"><div class="k">Téléphone</div><div class="v"><a class="link" href="tel:+33189724498">01 89 72 44 98</a></div></div>
-    <div class="key-row"><div class="k">Directeur de la publication</div><div class="v">Sara Cankaya</div></div>
-  </section>
+    <section class="legal-section">
+      <h2><span class="num">01</span>Éditeur du site</h2>
+      <p>Le présent site est édité par :</p>
+      <div class="legal-card">
+        <div class="kv-row"><div class="k">Raison sociale</div><div class="v">Sara Cankaya <span class="muted">— exerçant sous le nom commercial</span> <strong>Mad Makers</strong></div></div>
+        <div class="kv-row"><div class="k">Forme juridique</div><div class="v">Entrepreneur individuel (EI) — micro-entreprise</div></div>
+        <div class="kv-row"><div class="k">Siège social</div><div class="v">6 rue Youri Gagarine, 93230 Romainville, France</div></div>
+        <div class="kv-row"><div class="k">SIREN</div><div class="v">832 059 695</div></div>
+        <div class="kv-row"><div class="k">SIRET</div><div class="v">832 059 695 00029</div></div>
+        <div class="kv-row"><div class="k">N° TVA intra.</div><div class="v">FR12 832059695</div></div>
+        <div class="kv-row"><div class="k">Email</div><div class="v"><a class="link" href="mailto:contact@mad-makers.fr">contact@mad-makers.fr</a></div></div>
+        <div class="kv-row"><div class="k">Téléphone</div><div class="v"><a class="link" href="tel:+33189724498">01 89 72 44 98</a></div></div>
+        <div class="kv-row"><div class="k">Directeur de la publication</div><div class="v">Sara Cankaya</div></div>
+      </div>
+    </section>
 
-  <section>
-    <h2><span class="num">02</span>Hébergement</h2>
-    <p>Le site est hébergé par :</p>
-    <div class="key-row"><div class="k">Société</div><div class="v">Vercel Inc.</div></div>
-    <div class="key-row"><div class="k">Adresse</div><div class="v">340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</div></div>
-    <div class="key-row"><div class="k">Site web</div><div class="v"><a class="link" href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></div></div>
-    <div class="key-row"><div class="k">Contact</div><div class="v"><a class="link" href="mailto:privacy@vercel.com">privacy@vercel.com</a></div></div>
-  </section>
+    <section class="legal-section">
+      <h2><span class="num">02</span>Hébergement</h2>
+      <p>Le site est hébergé par :</p>
+      <div class="legal-card">
+        <div class="kv-row"><div class="k">Société</div><div class="v">Vercel Inc.</div></div>
+        <div class="kv-row"><div class="k">Adresse</div><div class="v">340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</div></div>
+        <div class="kv-row"><div class="k">Site web</div><div class="v"><a class="link" href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></div></div>
+        <div class="kv-row"><div class="k">Contact</div><div class="v"><a class="link" href="mailto:privacy@vercel.com">privacy@vercel.com</a></div></div>
+      </div>
+    </section>
 
-  <section>
-    <h2><span class="num">03</span>Propriété intellectuelle</h2>
-    <p>L'ensemble du contenu de ce site (textes, images, vidéos, sons, code source, charte graphique, logo) est la propriété exclusive de Mad Makers ou de ses partenaires, et est protégé par le droit d'auteur français et international (Code de la propriété intellectuelle, articles L.111-1 et suivants).</p>
-    <p>Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle, du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit, est <strong>interdite sans autorisation écrite préalable</strong>.</p>
-    <p>Les marques et logos cités ou affichés sur le site (notamment Riot Games, League of Legends, etc.) sont la propriété de leurs détenteurs respectifs. Leur mention est faite à des fins exclusivement éditoriales et illustratives.</p>
-  </section>
+    <section class="legal-section">
+      <h2><span class="num">03</span>Propriété intellectuelle</h2>
+      <p>L'ensemble du contenu de ce site (textes, images, vidéos, sons, code source, charte graphique, logo) est la propriété exclusive de Mad Makers ou de ses partenaires, et est protégé par le droit d'auteur français et international (Code de la propriété intellectuelle, articles L.111-1 et suivants).</p>
+      <p>Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle, du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit, est <strong>interdite sans autorisation écrite préalable</strong>.</p>
+      <p>Les marques et logos cités ou affichés sur le site (notamment Riot Games, League of Legends, etc.) sont la propriété de leurs détenteurs respectifs. Leur mention est faite à des fins exclusivement éditoriales et illustratives.</p>
+    </section>
 
-  <section>
-    <h2><span class="num">04</span>Crédits</h2>
-    <ul>
-      <li><strong>Conception, design, développement :</strong> Mad Makers</li>
-      <li><strong>Photographies / vidéos :</strong> Mad Makers, sauf indication contraire</li>
-      <li><strong>Typographies :</strong> Archivo Black, Inter, JetBrains Mono - servies via <a class="link" href="https://fonts.bunny.net" target="_blank" rel="noopener">Bunny Fonts</a> (RGPD-compliant)</li>
-    </ul>
-  </section>
+    <section class="legal-section">
+      <h2><span class="num">04</span>Crédits</h2>
+      <ul>
+        <li><strong>Conception, design, développement :</strong> Mad Makers</li>
+        <li><strong>Photographies / vidéos :</strong> Mad Makers, sauf indication contraire</li>
+        <li><strong>Typographies :</strong> Instrument Serif, Inter, JetBrains Mono — servies via <a class="link" href="https://fonts.bunny.net" target="_blank" rel="noopener">Bunny Fonts</a> (RGPD-compliant)</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2><span class="num">05</span>Liens hypertextes</h2>
-    <p>Le site peut contenir des liens vers des sites tiers. Mad Makers n'a aucun contrôle sur le contenu de ces sites externes et ne saurait être tenue responsable de leur contenu, de leur disponibilité ou des pratiques de confidentialité qui y sont appliquées.</p>
-  </section>
+    <section class="legal-section">
+      <h2><span class="num">05</span>Liens hypertextes</h2>
+      <p>Le site peut contenir des liens vers des sites tiers. Mad Makers n'a aucun contrôle sur le contenu de ces sites externes et ne saurait être tenue responsable de leur contenu, de leur disponibilité ou des pratiques de confidentialité qui y sont appliquées.</p>
+    </section>
 
-  <section>
-    <h2><span class="num">06</span>Droit applicable</h2>
-    <p>Les présentes mentions légales sont régies par le droit français. Tout litige relatif à leur interprétation ou exécution relèvera de la compétence exclusive des tribunaux français, sauf disposition contraire d'ordre public.</p>
-  </section>
+    <section class="legal-section">
+      <h2><span class="num">06</span>Droit applicable</h2>
+      <p>Les présentes mentions légales sont régies par le droit français. Tout litige relatif à leur interprétation ou exécution relèvera de la compétence exclusive des tribunaux français, sauf disposition contraire d'ordre public.</p>
+    </section>
 
-  <section>
-    <h2><span class="num">07</span>Contact</h2>
-    <p>Pour toute question relative aux présentes mentions légales ou au site, vous pouvez écrire à <a class="link" href="mailto:contact@mad-makers.fr">contact@mad-makers.fr</a>.</p>
-    <p>Voir aussi notre <a class="link" href="/politique-confidentialite.html">Politique de confidentialité</a>.</p>
-  </section>
+    <section class="legal-section">
+      <h2><span class="num">07</span>Contact</h2>
+      <p>Pour toute question relative aux présentes mentions légales ou au site, vous pouvez écrire à <a class="link" href="mailto:contact@mad-makers.fr">contact@mad-makers.fr</a>.</p>
+      <p>Voir aussi notre <a class="link" href="politique-confidentialite.html">Politique de confidentialité</a>.</p>
+    </section>
 
+  </div>
 </main>
 
+<!-- ================ FOOTER (Pro) ================ -->
 <footer class="foot">
-  <span>© 2026 - <b>Mad Makers</b> · Dream it. We make it.</span>
-  <span>Agence web créative · Paris · FR</span>
-  <span>
-    <a href="/">↑ Accueil</a>
-    <a href="/politique-confidentialite.html">Confidentialité</a>
-    <a href="https://share.google/PSeyhdo7m6e7L82Om" target="_blank" rel="noopener">Google Business</a>
-  </span>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div class="mk"></div>
+      <div class="addr">Mad Makers<br/>Agence web créative<br/>Paris — France</div>
+      <div class="tag">— Dream it. We make it.</div>
+    </div>
+    <div class="foot-col">
+      <h6>Services</h6>
+      <ul>
+        <li><a href="/#services">Site one-page</a></li>
+        <li><a href="/#services">Site vitrine</a></li>
+        <li><a href="/#services">Site sur-mesure</a></li>
+        <li><a href="/#services">Vidéo institutionnelle</a></li>
+        <li><a href="/#services">SEO &amp; contenus</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h6>Agence</h6>
+      <ul>
+        <li><a href="/#manifeste">Notre position</a></li>
+        <li><a href="/#projets">Projets</a></li>
+        <li><a href="/#equipe">Fondateurs</a></li>
+        <li><a href="/#refus">Engagements</a></li>
+      </ul>
+    </div>
+    <div class="foot-col contact">
+      <h6>Contact</h6>
+      <ul>
+        <li>
+          <span class="lbl">Email</span>
+          <a href="mailto:contact@mad-makers.fr">contact@mad-makers.fr</a>
+        </li>
+        <li>
+          <span class="lbl">Téléphone</span>
+          <a href="tel:+33189724498">01 89 72 44 98</a>
+        </li>
+        <li>
+          <span class="lbl">Rendez-vous</span>
+          <a href="https://calendly.com/directedbymaick/30min" target="_blank" rel="noopener">Réserver un créneau ↗</a>
+        </li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h6>Légal</h6>
+      <ul>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="politique-confidentialite.html">Politique</a></li>
+        <li><a href="https://share.google/PSeyhdo7m6e7L82Om" target="_blank" rel="noopener">Google Business ↗</a></li>
+        <li><a href="https://www.mad-makers.fr" target="_blank" rel="noopener">Site principal ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div>© 2026 — MAD MAKERS · Agence web créative · Paris</div>
+    <div class="social">
+      <a href="https://www.linkedin.com/company/113270995" target="_blank" rel="noopener" aria-label="LinkedIn Mad Makers" title="LinkedIn">In</a>
+      <a href="mailto:contact@mad-makers.fr" aria-label="Envoyer un email" title="Email">@</a>
+      <a href="https://www.mad-makers.fr" target="_blank" rel="noopener" aria-label="Site principal Mad Makers" title="Site principal">↗</a>
+    </div>
+  </div>
 </footer>
 
 </body>
