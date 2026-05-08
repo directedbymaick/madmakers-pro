@@ -540,7 +540,14 @@ section.projects{background:var(--bg);padding:140px 32px;border-top:1px solid va
   min-height:260px;
 }
 .proj-card:hover{transform:translateY(-4px);border-color:rgba(200,255,61,0.32)}
-.proj-card .cover{position:relative;flex:1;overflow:hidden;background:#0c0d0a;min-height:180px}
+.proj-card .cover{
+  position:relative;flex:1;overflow:hidden;background:#0c0d0a;min-height:180px;
+  /* Locks the cover to a consistent shape across all small cards. With
+     object-fit:cover on the inner img/video, portrait or landscape source
+     images get cropped to fit instead of stretching the card vertically. */
+  aspect-ratio:3/2;
+}
+.proj-card.featured .cover{aspect-ratio:auto}
 .proj-card .cover video,.proj-card .cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
 .proj-card:hover .cover video,.proj-card:hover .cover img{transform:scale(1.04)}
 .proj-card .cover::after{
