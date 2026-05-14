@@ -1,4 +1,4 @@
-# Fonts - pro.mad-makers.fr
+# Fonts - carnetplein.mad-makers.fr
 
 Le site attend les fichiers suivants pour charger AeonikPro et DotConnect.
 **Tant qu'ils ne sont pas présents, le navigateur tombe sur Geist (Bunny Fonts) puis system-ui.**

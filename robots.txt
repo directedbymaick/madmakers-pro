@@ -3,4 +3,4 @@ Allow: /
 Disallow: /assets/*.bk.mp4$
 Disallow: /assets/*.original.mp4$
 
-Sitemap: https://pro.mad-makers.fr/sitemap.xml
+Sitemap: https://carnetplein.mad-makers.fr/sitemap.xml

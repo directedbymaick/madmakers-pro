@@ -1495,7 +1495,7 @@ def render_cover():
       <div class="accent-line"></div>
       Édition 2026 · 7 principes Cialdini · Conforme loi 2026
     </div>
-    <div>pro.mad-makers.fr</div>
+    <div>carnetplein.mad-makers.fr</div>
   </div>
 </section>
 """
@@ -1998,7 +1998,7 @@ def render_cta():
   <p>Vous avez le template, les principes, les objections, les relances. Mais entre le PDF dans votre Drive et le devis envoyé sans faute le bon jour, il y a un fossé : la mise en pratique répétée.</p>
   <p>Dans le programme Accélérateur Carnet Plein®, on installe avec vous : le devis-type personnalisé à votre charte (1 demi-journée), la séquence de relances automatisée (CRM léger), la grille des 8 objections imprimée dans votre van, et 4 sessions de coaching pour adapter le discours à votre marché.</p>
   <p>Objectif : passer de 22-30% à 55-70% de signature en 90 jours. Sans baisser vos prix.</p>
-  <a href="https://pro.mad-makers.fr" class="button">Audit gratuit 20 min → pro.mad-makers.fr</a>
+  <a href="https://carnetplein.mad-makers.fr" class="button">Audit gratuit 20 min → carnetplein.mad-makers.fr</a>
 </section>
 """
 

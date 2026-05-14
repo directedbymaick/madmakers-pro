@@ -982,7 +982,7 @@ def render_cover():
       <div class="accent-line"></div>
       Édition 2026 · iOS 18 &amp; Android 15-16
     </div>
-    <div>pro.mad-makers.fr</div>
+    <div>carnetplein.mad-makers.fr</div>
   </div>
 </section>
 """
@@ -1499,7 +1499,7 @@ def render_cta():
   <p>Les chantiers ne s'arrêtent pas pour qu'on prenne des photos. On comprend.</p>
   <p>Dans le programme Accélérateur Carnet Plein®, on installe un système simple pour vous : vous envoyez par WhatsApp les photos brutes de vos 2-3 chantiers de la semaine, on les retouche, on les catégorise, on les uploade sur votre fiche Google, on crée le Google Post avant/après hebdomadaire.</p>
   <p>Vous gardez le savoir-faire métier. On gère le digital.</p>
-  <a href="https://pro.mad-makers.fr" class="button">Audit gratuit 20 min → pro.mad-makers.fr</a>
+  <a href="https://carnetplein.mad-makers.fr" class="button">Audit gratuit 20 min → carnetplein.mad-makers.fr</a>
 </section>
 """
 

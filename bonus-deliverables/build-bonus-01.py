@@ -300,7 +300,7 @@ def slide_cover():
 
     # Bottom-right brand mark
     text(s, Inches(8.5), Inches(7.05), Inches(4.2), Inches(0.3),
-         "pro.mad-makers.fr",
+         "carnetplein.mad-makers.fr",
          size=10, color=PAPER_DIM, font=FONT_MONO,
          align=PP_ALIGN.RIGHT)
 
