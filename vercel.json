@@ -26,7 +26,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.bunny.net; font-src 'self' https://fonts.bunny.net data:; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto: tel:; object-src 'none'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.bunny.net; font-src 'self' https://fonts.bunny.net data:; img-src 'self' data: blob: https:; media-src 'self' blob: https://pub-381edcf9bbfb471882a8efc342f37d57.r2.dev; connect-src 'self' https://pub-381edcf9bbfb471882a8efc342f37d57.r2.dev; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto: tel:; object-src 'none'; upgrade-insecure-requests"
         }
       ]
     },
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "source": "/(styles.css|main.js|cards-fx.js)",
+      "source": "/(styles.css|main.js)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]
