@@ -1,4 +1,4 @@
-# Dev-only utilities — never ship these to production
+# Dev-only utilities - never ship these to production
 serve.py
 faststart.py
 
