@@ -6,14 +6,32 @@
 (function () {
   'use strict';
 
-  /* ---------- Nav scroll state ---------- */
+  /* ---------- Nav scroll state + hide-on-scroll-down ---------- */
   const nav = document.getElementById('nav');
+  const body = document.body;
   if (nav) {
     let ticking = false;
+    let lastScrollY = window.scrollY;
+    const HIDE_THRESHOLD = 80;  // ne déclenche le hide qu'après 80px de scroll
     const onScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          nav.classList.toggle('is-scrolled', window.scrollY > 24);
+          const y = window.scrollY;
+          nav.classList.toggle('is-scrolled', y > 24);
+
+          // Direction du scroll
+          const delta = y - lastScrollY;
+          if (y < HIDE_THRESHOLD) {
+            // Toujours visible en haut de page
+            body.classList.remove('nav-hidden');
+          } else if (delta > 4) {
+            // Scroll down significatif → hide
+            body.classList.add('nav-hidden');
+          } else if (delta < -4) {
+            // Scroll up significatif → show
+            body.classList.remove('nav-hidden');
+          }
+          lastScrollY = y;
           ticking = false;
         });
         ticking = true;
@@ -21,6 +39,16 @@
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  /* ---------- Banner height dynamique pour positionner la nav ---------- */
+  const banner = document.querySelector('.pilote-banner');
+  if (banner && nav) {
+    const adjustNavTop = () => {
+      nav.style.setProperty('top', banner.offsetHeight + 'px');
+    };
+    adjustNavTop();
+    window.addEventListener('resize', adjustNavTop, { passive: true });
   }
 
   /* ---------- Nav burger (mobile) ---------- */
