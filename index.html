@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Core SEO -->
-<title>L'Accélérateur Carnet Plein® by Mad Makers - Plus de chantiers pour artisans du bâtiment - Île-de-France, Hauts-de-France, Grand Est</title>
-<meta name="description" content="Système complet pour plombiers-chauffagistes en Île-de-France, Hauts-de-France et Grand Est. Site qui convertit, fiche Google dominante, avis automatisés, reporting. 90 jours. 3 places par cohort. Garantie Carnet Plein®." />
-<meta name="keywords" content="artisans bâtiment site internet, plombier chauffagiste site web, pompe à chaleur leads, MaPrimeRénov artisans, Google Business Profile artisan, agence web artisans Île-de-France, agence web Hauts-de-France, agence web Grand Est" />
+<title>Carnet Plein® - Plus de chantiers pour plombiers-chauffagistes</title>
+<meta name="description" content="Plombiers-chauffagistes IDF, HDF, Grand Est : site qui convertit, Google local dominant, avis automatisés, reporting. 90 jours. Garantie Carnet Plein®." />
+<meta name="keywords" content="plombier chauffagiste site web, agence web plombier, SEO local plombier, Google Business Profile artisan, MaPrimeRénov artisans, agence web Île-de-France, agence web Hauts-de-France, agence web Grand Est" />
 <meta name="author" content="Mad Makers" />
 <meta name="robots" content="index,follow,max-image-preview:large" />
 <meta name="theme-color" content="#0a0a0a" />
@@ -23,8 +23,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Carnet Plein® by Mad Makers" />
-<meta property="og:title" content="L'Accélérateur Carnet Plein® - Plus de chantiers pour artisans du bâtiment" />
-<meta property="og:description" content="Système complet pour plombiers-chauffagistes. Site, Google local, avis, reporting - entièrement géré. 90 jours. Garantie Carnet Plein®." />
+<meta property="og:title" content="Carnet Plein® - Plus de chantiers pour plombiers-chauffagistes" />
+<meta property="og:description" content="Plombiers-chauffagistes IDF, HDF, Grand Est : site qui convertit, Google local dominant, avis automatisés, reporting. 90 jours. Garantie Carnet Plein®." />
 <meta property="og:url" content="https://carnetplein.mad-makers.fr/" />
 <meta property="og:image" content="https://carnetplein.mad-makers.fr/assets/og-pro.jpg" />
 <meta property="og:image:width" content="1200" />
@@ -34,8 +34,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="L'Accélérateur Carnet Plein® - Plus de chantiers pour artisans" />
-<meta name="twitter:description" content="Système complet pour plombiers-chauffagistes. Site, Google local, avis, reporting - entièrement géré. 90 jours. Garantie Carnet Plein®." />
+<meta name="twitter:title" content="Carnet Plein® - Plus de chantiers pour plombiers-chauffagistes" />
+<meta name="twitter:description" content="Plombiers-chauffagistes IDF, HDF, Grand Est : site qui convertit, Google local dominant, avis automatisés, reporting. 90 jours. Garantie Carnet Plein®." />
 <meta name="twitter:image" content="https://carnetplein.mad-makers.fr/assets/og-pro.jpg" />
 
 <!-- Schema.org structured data -->
@@ -73,22 +73,34 @@
       "name": "L'Accélérateur Carnet Plein®",
       "alternateName": "Carnet Plein® by Mad Makers",
       "provider": {"@id": "https://www.mad-makers.fr/#organization"},
-      "description": "Système complet pour plombiers-chauffagistes en Île-de-France, Hauts-de-France et Grand Est. Site générateur de devis, domination Google locale, avis automatisés, reporting, accompagnement 12 mois.",
+      "description": "Système complet pour plombiers-chauffagistes en Île-de-France, Hauts-de-France et Grand Est. Site générateur de devis, SEO local, GBP optimisé, avis automatisés, reporting, accompagnement 12 mois avec cohort.",
       "areaServed": ["Île-de-France", "Hauts-de-France", "Grand Est"],
       "audience": {
         "@type": "BusinessAudience",
         "audienceType": "Plombier-chauffagiste, artisan du bâtiment, 1 à 10 salariés"
       },
       "offers": {
-        "@type": "Offer",
-        "price": "5000",
+        "@type": "AggregateOffer",
         "priceCurrency": "EUR",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "5000",
-          "priceCurrency": "EUR",
-          "description": "5 000 € setup + 800 €/mois sur 12 mois - 3 places par cohort mensuelle"
-        }
+        "lowPrice": "12300",
+        "highPrice": "13800",
+        "offerCount": 2,
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Carnet Plein® Intégral",
+            "price": "13800",
+            "priceCurrency": "EUR",
+            "description": "5 000 € HT setup + 800 €/mois × 11 mois. 6 composants incluant Site web + SEO on-page + pages géolocalisées."
+          },
+          {
+            "@type": "Offer",
+            "name": "Carnet Plein® Focus",
+            "price": "12300",
+            "priceCurrency": "EUR",
+            "description": "3 500 € HT setup + 800 €/mois × 11 mois. 5 composants (sans Site web). Pour clients qui gardent leur site existant."
+          }
+        ]
       }
     },
     {
@@ -98,6 +110,76 @@
       "name": "L'Accélérateur Carnet Plein® by Mad Makers",
       "inLanguage": "fr-FR",
       "about": {"@id": "https://carnetplein.mad-makers.fr/#service"}
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://carnetplein.mad-makers.fr/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "5 000 € + 800 €/mois, c'est cher. Vous pouvez faire à 3 000 € ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si on baissait le prix, on baisserait la qualité et on serait obligés de virer du périmètre. Vous auriez un site, pas un système. Notre marge nous permet d'investir dans votre projet, c'est ce qui garantit qu'on continue à bosser pour vous si la garantie se déclenche."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vous me garantissez combien de leads par mois, par écrit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. En droit français (art. 1231-1 Code civil), une promesse chiffrée transforme l'obligation de moyens en obligation de résultat. Ce qu'on garantit, c'est qu'on continue à bosser gratuitement si on n'a pas atteint vos objectifs à 12 mois. C'est plus engageant qu'un chiffre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je peux pas mettre 5 000 € d'un coup sur la table.",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deux options : 3× sans frais (1 667 € à la signature, J+30 et J+60) ou 6× avec 2% d'agios (850 €/mois sur 6 mois). Le retainer mensuel de 800 € démarre à la mise en ligne (J14) et court sur 12 mois."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le SEO, j'y comprends rien. Comment je peux suivre ce que vous faites ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous n'avez pas besoin de comprendre le SEO. Vous avez besoin de savoir 3 choses chaque mois : combien de visiteurs, combien de demandes de devis, votre position sur Google. C'est dans le reporting d'une page envoyé tous les 5 du mois, plus un appel de 30 min."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mon neveu m'a déjà fait un site. Qu'est-ce que vous apportez de plus ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un site sans système d'acquisition derrière, c'est une carte de visite numérique. Ce qu'on apporte : la fiche Google optimisée + les pages géolocalisées + le système d'avis automatisé + le suivi mensuel. En formule Focus on garde votre site existant et on ajoute juste ce qui manque."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence avec une agence web classique ou un freelance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trois différences : (1) engagement 12 mois avec objectif business et garantie de continuité gratuite si non atteint ; (2) tout inclus dans un seul prix (site, SEO, GBP, avis, reporting, coaching) ; (3) niche serrée plombiers-chauffagistes IDF/HDF/Grand Est."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Et si je ne suis pas satisfait des premières maquettes ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On présente 3 pistes distinctes en phase 1. Si aucune ne fonctionne, on refait un cycle gratuitement. Au-delà, on se pose la question franchement et on propose soit d'arrêter avec remboursement partiel, soit de redéfinir le scope ensemble."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dois-je y consacrer de mon côté ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compter 4 à 6 heures réparties sur les 90 jours : kickoff 90 min, 2 interviews copywriting 60-90 min, validation maquettes 1h, validation finale 1h, calls mensuels 30 min. Photos chantiers à fournir : 20-30 photos brutes via WhatsApp, on gère le tri et la retouche."
+          }
+        }
+      ]
     }
   ]
 }
@@ -1177,5 +1259,79 @@
 </button>
 
 <script src="main.js" defer></script>
+
+<!-- ================ COOKIE CONSENT BANNER + TRACKING (RGPD) ================ -->
+<!--
+  Configuration tracking :
+  - GA4 : remplacer 'G-XXXXXXXXXX' par votre ID GA4 (créer sur analytics.google.com)
+  - Microsoft Clarity : remplacer 'CLARITY_ID' par votre ID (créer sur clarity.microsoft.com)
+  Tant que les IDs ne sont pas renseignés, le script ne charge rien (placeholder safe).
+-->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookies et confidentialité" style="display:none">
+  <div class="cookie-banner-content">
+    <p class="cookie-banner-text">
+      On utilise des cookies de mesure (Google Analytics, Microsoft Clarity) pour comprendre comment vous naviguez sur notre site. <strong>Aucune publicité, aucun partage avec des tiers, aucun profilage.</strong> <a href="politique-confidentialite">En savoir plus</a>.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-refuse" class="cookie-banner-btn cookie-banner-btn-ghost" type="button">Refuser</button>
+      <button id="cookie-accept" class="cookie-banner-btn cookie-banner-btn-primary" type="button">Accepter</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var CONSENT_KEY = 'cp-cookie-consent';
+  var GA4_ID = 'G-KVV7C90TRY';         // GA4 Carnet Plein® - propriété créée sous compte Mad Makers
+  var CLARITY_ID = 'CLARITY_ID';       // TODO: remplacer par votre ID Microsoft Clarity réel
+  var banner = document.getElementById('cookie-banner');
+  var consent = null;
+  try { consent = localStorage.getItem(CONSENT_KEY); } catch(e) {}
+
+  function loadTracking(){
+    // GA4 - ne charge que si ID configuré
+    if (GA4_ID && GA4_ID !== 'G-XXXXXXXXXX') {
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+      document.head.appendChild(ga);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA4_ID, {
+        anonymize_ip: true,
+        cookie_flags: 'SameSite=Strict;Secure'
+      });
+    }
+    // Microsoft Clarity - ne charge que si ID configuré
+    if (CLARITY_ID && CLARITY_ID !== 'CLARITY_ID') {
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", CLARITY_ID);
+    }
+  }
+
+  function setConsent(value){
+    try { localStorage.setItem(CONSENT_KEY, value); } catch(e) {}
+    if (banner) banner.style.display = 'none';
+    if (value === 'accepted') loadTracking();
+  }
+
+  // Si pas encore de choix : afficher la bannière après 1s
+  if (!consent && banner) {
+    setTimeout(function(){ banner.style.display = 'flex'; }, 1000);
+  }
+  // Si choix déjà fait et accepté : charger directement
+  if (consent === 'accepted') loadTracking();
+
+  var btnAccept = document.getElementById('cookie-accept');
+  var btnRefuse = document.getElementById('cookie-refuse');
+  if (btnAccept) btnAccept.addEventListener('click', function(){ setConsent('accepted'); });
+  if (btnRefuse) btnRefuse.addEventListener('click', function(){ setConsent('refused'); });
+})();
+</script>
 </body>
 </html>
