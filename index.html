@@ -185,8 +185,10 @@
 }
 </script>
 
-<!-- Fonts: AeonikPro + DotConnect (custom .woff2 dans assets/fonts/, voir README)
-     Fallback : Geist (Vercel, gratuit via Bunny Fonts, EU-hosted, RGPD-compliant) -->
+<!-- LCP optimization : préchargement du poster hero -->
+<link rel="preload" as="image" href="assets/metiers/electrician-fixing.webp?v=20260514" fetchpriority="high" />
+
+<!-- Fonts: Geist via Bunny Fonts (EU-hosted, RGPD-compliant). Fallback system fonts. -->
 <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
 <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" />
 
@@ -219,7 +221,8 @@
   <div class="hero-bg">
     <video class="hero-video" src="https://pub-381edcf9bbfb471882a8efc342f37d57.r2.dev/hero-metiers-background.mp4"
            autoplay muted loop playsinline preload="metadata"
-           poster="assets/metiers/electrician-fixing.png?v=20260514"
+           poster="assets/metiers/electrician-fixing.webp?v=20260514"
+           fetchpriority="high"
            aria-hidden="true"></video>
     <div class="hero-tint"></div>
   </div>
@@ -319,7 +322,7 @@
       <!-- 01 Marc D. -->
       <article class="metier-tile" data-metier="chauffage">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-01-marc.png?v=20260514" alt="Marc D., plombier-chauffagiste à Reims" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-01-marc.webp?v=20260514" alt="Marc D., plombier-chauffagiste à Reims" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">M.D · 01</span>
         </div>
         <span class="metier-badge">Plomberie · Chauffage</span>
@@ -335,7 +338,7 @@
       <!-- 02 Sophie L. -->
       <article class="metier-tile" data-metier="electricite">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-02-sophie.png?v=20260514" alt="Sophie L., électricienne à Lille" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-02-sophie.webp?v=20260514" alt="Sophie L., électricienne à Lille" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">S.L · 02</span>
         </div>
         <span class="metier-badge">Électricité</span>
@@ -351,7 +354,7 @@
       <!-- 03 Karim B. -->
       <article class="metier-tile" data-metier="gros-oeuvre">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-03-karim.png?v=20260514" alt="Karim B., maçon à Romainville" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-03-karim.webp?v=20260514" alt="Karim B., maçon à Romainville" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">K.B · 03</span>
         </div>
         <span class="metier-badge">Gros œuvre</span>
@@ -367,7 +370,7 @@
       <!-- 04 Hélène R. -->
       <article class="metier-tile" data-metier="finitions">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-04-helene.png?v=20260514" alt="Hélène R., plâtrière-peintre à Strasbourg" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-04-helene.webp?v=20260514" alt="Hélène R., plâtrière-peintre à Strasbourg" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">H.R · 04</span>
         </div>
         <span class="metier-badge">Finitions</span>
@@ -383,7 +386,7 @@
       <!-- 05 Patrick V. -->
       <article class="metier-tile" data-metier="chauffage">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-05-patrick.png?v=20260514" alt="Patrick V., plombier à Paris" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-05-patrick.webp?v=20260514" alt="Patrick V., plombier à Paris" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">P.V · 05</span>
         </div>
         <span class="metier-badge">Plomberie · Chauffage</span>
@@ -399,7 +402,7 @@
       <!-- 06 Mehdi K. -->
       <article class="metier-tile" data-metier="electricite">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-06-mehdi.png?v=20260514" alt="Mehdi K., électricien à Roubaix" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-06-mehdi.webp?v=20260514" alt="Mehdi K., électricien à Roubaix" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">M.K · 06</span>
         </div>
         <span class="metier-badge">Électricité</span>
@@ -421,7 +424,7 @@
       <!-- 07 Olivier N. -->
       <article class="metier-tile" data-metier="gros-oeuvre" data-shift="right">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-07-olivier.png?v=20260514" alt="Olivier N., maçon-rénovateur à Charleville-Mézières" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-07-olivier.webp?v=20260514" alt="Olivier N., maçon-rénovateur à Charleville-Mézières" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">O.N · 07</span>
         </div>
         <span class="metier-badge">Gros œuvre</span>
@@ -437,7 +440,7 @@
       <!-- 08 Aïcha T. -->
       <article class="metier-tile" data-metier="finitions">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-08-aicha.png?v=20260514" alt="Aïcha T., carreleuse à Saint-Denis" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-08-aicha.webp?v=20260514" alt="Aïcha T., carreleuse à Saint-Denis" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">A.T · 08</span>
         </div>
         <span class="metier-badge">Finitions</span>
@@ -453,7 +456,7 @@
       <!-- 09 David S. -->
       <article class="metier-tile" data-metier="gros-oeuvre">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-09-david.png?v=20260514" alt="David S., étancheur-couvreur à Metz" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-09-david.webp?v=20260514" alt="David S., étancheur-couvreur à Metz" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">D.S · 09</span>
         </div>
         <span class="metier-badge">Couverture</span>
@@ -469,7 +472,7 @@
       <!-- 10 Thomas G. -->
       <article class="metier-tile" data-metier="electricite">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-10-thomas.png?v=20260514" alt="Thomas G., électricien IRVE à Versailles" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-10-thomas.webp?v=20260514" alt="Thomas G., électricien IRVE à Versailles" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">T.G · 10</span>
         </div>
         <span class="metier-badge">Électricité</span>
@@ -485,7 +488,7 @@
       <!-- 11 Julien M. -->
       <article class="metier-tile" data-metier="gros-oeuvre" data-shift="right">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-11-julien.png?v=20260514" alt="Julien M., couvreur-zingueur à Amiens" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-11-julien.webp?v=20260514" alt="Julien M., couvreur-zingueur à Amiens" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">J.M · 11</span>
         </div>
         <span class="metier-badge">Couverture</span>
@@ -501,7 +504,7 @@
       <!-- 12 Léa P. -->
       <article class="metier-tile" data-metier="finitions">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-12-lea.png?v=20260514" alt="Léa P., menuisière à Pontoise" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-12-lea.webp?v=20260514" alt="Léa P., menuisière à Pontoise" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">L.P · 12</span>
         </div>
         <span class="metier-badge">Finitions</span>
@@ -517,7 +520,7 @@
       <!-- 13 Bruno L. -->
       <article class="metier-tile" data-metier="chauffage" data-shift="right">
         <div class="metier-portrait">
-          <img src="assets/metiers/portrait-13-bruno.png?v=20260514" alt="Bruno L., chauffagiste RGE à Arras" loading="lazy" onerror="this.style.display='none'">
+          <img src="assets/metiers/portrait-13-bruno.webp?v=20260514" alt="Bruno L., chauffagiste RGE à Arras" loading="lazy" onerror="this.style.display='none'">
           <span class="placeholder-initials">B.L · 13</span>
         </div>
         <span class="metier-badge">Plomberie · Chauffage</span>
@@ -586,7 +589,7 @@
       <!-- Component 01 -->
       <article class="bundle-item" data-reveal>
         <div class="bundle-item-mockup">
-          <img src="assets/component-01-site.png?v=20260514" alt="Mockup d'un site web artisan avec formulaire de devis multi-étapes" loading="lazy" />
+          <img src="assets/component-01-site.webp?v=20260514" alt="Mockup d'un site web artisan avec formulaire de devis multi-étapes" loading="lazy" />
         </div>
         <div class="bundle-item-body">
           <div class="bundle-item-head">
@@ -601,7 +604,7 @@
       <!-- Component 02 -->
       <article class="bundle-item" data-reveal>
         <div class="bundle-item-mockup">
-          <img src="assets/component-02-gmb.png?v=20260514" alt="Capture d'une fiche Google Business Profile artisan complète et bien notée" loading="lazy" />
+          <img src="assets/component-02-gmb.webp?v=20260514" alt="Capture d'une fiche Google Business Profile artisan complète et bien notée" loading="lazy" />
         </div>
         <div class="bundle-item-body">
           <div class="bundle-item-head">
@@ -616,7 +619,7 @@
       <!-- Component 03 -->
       <article class="bundle-item" data-reveal>
         <div class="bundle-item-mockup">
-          <img src="assets/component-03-avis.png?v=20260514" alt="Workflow automatisé de demande d'avis Google post-chantier" loading="lazy" />
+          <img src="assets/component-03-avis.webp?v=20260514" alt="Workflow automatisé de demande d'avis Google post-chantier" loading="lazy" />
         </div>
         <div class="bundle-item-body">
           <div class="bundle-item-head">
@@ -656,7 +659,7 @@
       <!-- Component 05 -->
       <article class="bundle-item" data-reveal>
         <div class="bundle-item-mockup">
-          <img src="assets/component-05-dashboard.png?v=20260514" alt="Tableau de bord mensuel avec positions Google, demandes de devis et top requêtes" loading="lazy" />
+          <img src="assets/component-05-dashboard.webp?v=20260514" alt="Tableau de bord mensuel avec positions Google, demandes de devis et top requêtes" loading="lazy" />
         </div>
         <div class="bundle-item-body">
           <div class="bundle-item-head">
@@ -671,7 +674,7 @@
       <!-- Component 06 -->
       <article class="bundle-item" data-reveal>
         <div class="bundle-item-mockup">
-          <img src="assets/component-06-photos.png?v=20260514" alt="Thumbnail de la mini-formation photos de chantier au smartphone" loading="lazy" />
+          <img src="assets/component-06-photos.webp?v=20260514" alt="Thumbnail de la mini-formation photos de chantier au smartphone" loading="lazy" />
         </div>
         <div class="bundle-item-body">
           <div class="bundle-item-head">
@@ -796,7 +799,7 @@
     <div class="bonus-grid" data-reveal-stagger>
       <article class="bonus-card">
         <div class="bonus-mockup">
-          <img src="assets/bonus-01-gmb-checklist.png?v=20260514" alt="Couverture PDF Checklist 12 points fiche Google parfaite" loading="lazy" />
+          <img src="assets/bonus-01-gmb-checklist.webp?v=20260514" alt="Couverture PDF Checklist 12 points fiche Google parfaite" loading="lazy" />
         </div>
         <div class="bonus-body">
           <div class="bonus-head">
@@ -810,7 +813,7 @@
 
       <article class="bonus-card">
         <div class="bonus-mockup">
-          <img src="assets/bonus-02-avis-templates.png?v=20260514" alt="Pack 30 modèles de réponses aux avis Google" loading="lazy" />
+          <img src="assets/bonus-02-avis-templates.webp?v=20260514" alt="Pack 30 modèles de réponses aux avis Google" loading="lazy" />
         </div>
         <div class="bonus-body">
           <div class="bonus-head">
@@ -824,7 +827,7 @@
 
       <article class="bonus-card bonus-loom">
         <div class="bonus-mockup">
-          <img src="assets/bonus-03-photos-loom.png?v=20260514" alt="Thumbnail Loom de la mini-formation photos smartphone" loading="lazy" />
+          <img src="assets/bonus-03-photos-loom.webp?v=20260514" alt="Thumbnail Loom de la mini-formation photos smartphone" loading="lazy" />
         </div>
         <div class="bonus-body">
           <div class="bonus-head">
@@ -838,7 +841,7 @@
 
       <article class="bonus-card">
         <div class="bonus-mockup">
-          <img src="assets/bonus-04-devis-template.png?v=20260514" alt="Template Devis Closing 70% Word et Notion" loading="lazy" />
+          <img src="assets/bonus-04-devis-template.webp?v=20260514" alt="Template Devis Closing 70% Word et Notion" loading="lazy" />
         </div>
         <div class="bonus-body">
           <div class="bonus-head">
@@ -1040,7 +1043,7 @@
       <article class="preuve-card">
         <div class="preuve-head">
           <div class="preuve-photo">
-            <img src="assets/goudet-pfp.png?v=20260514" alt="Photo de Goudet Abalé, cofondateur Mad Makers" loading="lazy" />
+            <img src="assets/goudet-pfp.webp?v=20260514" alt="Photo de Goudet Abalé, cofondateur Mad Makers" loading="lazy" />
           </div>
           <div class="preuve-info">
             <div class="name">Goudet Abalé</div>
@@ -1177,7 +1180,7 @@
 <!-- ================ FOOTER CTA ================ -->
 <section class="footer-cta" id="contact">
   <video class="footer-cta-video" src="assets/footer-loop.mp4?v=20260514"
-         autoplay muted loop playsinline preload="metadata"
+         autoplay muted loop playsinline preload="none"
          aria-hidden="true"></video>
   <div class="footer-cta-tint"></div>
   <div class="container footer-cta-inner">
