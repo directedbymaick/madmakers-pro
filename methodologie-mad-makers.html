@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Core SEO -->
+<title>Méthodologie Mad Makers - Founder's case · Carnet Plein®</title>
+<meta name="description" content="Mad Makers applique sa propre méthode Carnet Plein® et publie ses chiffres chaque mois. Dashboard public, vidéos mensuelles, transparence totale. Pas de cas client - c'est nous-mêmes." />
+<meta name="robots" content="index,follow" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="canonical" href="https://carnetplein.mad-makers.fr/methodologie-mad-makers.html" />
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Carnet Plein® by Mad Makers" />
+<meta property="og:title" content="Méthodologie Mad Makers - Founder's case" />
+<meta property="og:description" content="On applique notre propre méthode. Dashboard public mensuel, transparence radicale." />
+<meta property="og:url" content="https://carnetplein.mad-makers.fr/methodologie-mad-makers.html" />
+<meta property="og:image" content="https://carnetplein.mad-makers.fr/assets/og-pro.jpg" />
+<meta property="og:locale" content="fr_FR" />
+
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  .methodo-page{background:var(--encre);color:var(--paper);min-height:100vh;position:relative;overflow-x:hidden}
+  .methodo-hero{padding:120px 0 60px;position:relative}
+  .methodo-eyebrow{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:0.18em;color:var(--accent);text-transform:uppercase;margin-bottom:24px;display:inline-flex;align-items:center;gap:10px}
+  .methodo-eyebrow::before{content:"";width:8px;height:8px;background:var(--accent);border-radius:50%}
+  .methodo-h1{font-size:clamp(36px,6vw,72px);font-weight:600;line-height:0.98;letter-spacing:-0.025em;color:#fff;margin:0 0 28px;max-width:22ch}
+  .methodo-h1 em{color:var(--accent);font-style:italic}
+  .methodo-sub{font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:#d6d3cb;max-width:64ch;margin-bottom:32px}
+
+  .methodo-section{padding:60px 0;border-top:1px solid rgba(255,255,255,0.08)}
+  .methodo-section h2{font-size:clamp(26px,3.5vw,42px);font-weight:600;letter-spacing:-0.02em;line-height:1.1;color:#fff;margin:0 0 16px;max-width:28ch}
+  .methodo-section h2 em{color:var(--accent);font-style:italic}
+  .methodo-section .lead{font-size:16.5px;line-height:1.6;color:#d6d3cb;max-width:64ch;margin-bottom:32px}
+
+  /* Loom embed placeholder */
+  .loom-placeholder{aspect-ratio:16/9;background:#0c0c0a;border:1px dashed rgba(255,255,255,0.15);border-radius:16px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;padding:48px;text-align:center;margin:32px 0;max-width:840px}
+  .loom-placeholder-icon{width:64px;height:64px;border-radius:50%;background:rgba(224,84,27,0.18);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:24px}
+  .loom-placeholder h4{color:#fff;font-size:18px;margin:0;font-weight:500}
+  .loom-placeholder p{color:#a9a69f;font-size:14px;margin:0;max-width:36ch;line-height:1.5}
+
+  /* Dashboard KPIs */
+  .dashboard-meta{display:flex;align-items:center;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+  .dashboard-status{padding:8px 16px;background:rgba(45,154,95,0.12);border:1px solid rgba(45,154,95,0.40);border-radius:999px;font-family:var(--f-mono);font-size:11px;color:#7dd3a3;letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}
+  .dashboard-status::before{content:"";width:6px;height:6px;background:#2d9a5f;border-radius:50%}
+  .dashboard-update{font-family:var(--f-mono);font-size:12px;color:#a9a69f;letter-spacing:0.04em}
+
+  .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:32px 0}
+  @media (max-width:880px){.kpi-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.kpi-grid{grid-template-columns:1fr}}
+  .kpi-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px}
+  .kpi-label{font-family:var(--f-mono);font-size:10.5px;color:#a9a69f;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px}
+  .kpi-value{font-size:36px;font-weight:600;letter-spacing:-0.02em;color:#fff;line-height:1}
+  .kpi-value.pending{color:#a9a69f}
+  .kpi-trend{font-family:var(--f-mono);font-size:11px;margin-top:8px;color:#a9a69f}
+  .kpi-trend.up{color:#7dd3a3}
+  .kpi-trend.down{color:#e89384}
+
+  .why-section{background:rgba(224,84,27,0.04);border-top:1px solid rgba(224,84,27,0.18)}
+  .why-section h2{color:#fff}
+  .why-list{counter-reset:why;list-style:none;padding:0;margin:24px 0 0;max-width:62ch}
+  .why-list li{counter-increment:why;padding:14px 0 14px 48px;position:relative;font-size:15.5px;line-height:1.55;color:#e8e6df;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .why-list li::before{content:counter(why,decimal-leading-zero);position:absolute;left:0;top:16px;font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--accent);letter-spacing:0.04em}
+
+  .archive-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:32px}
+  .archive-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:24px}
+  .archive-card.placeholder{border-style:dashed;background:transparent}
+  .archive-card h4{font-size:16px;color:#fff;margin:0 0 8px;font-weight:500}
+  .archive-card .archive-date{font-family:var(--f-mono);font-size:11px;color:var(--accent);letter-spacing:0.08em;margin-bottom:8px;text-transform:uppercase}
+  .archive-card p{font-size:13.5px;color:#d6d3cb;line-height:1.5;margin:0 0 12px}
+  .archive-card a{font-family:var(--f-mono);font-size:11px;color:var(--accent);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase}
+
+  .backlink{font-family:var(--f-mono);font-size:12px;letter-spacing:0.08em;color:#a9a69f;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px;margin-bottom:40px}
+  .backlink:hover{color:#fff}
+
+  footer.methodo-foot{padding:48px 0;text-align:center;color:#a9a69f;font-size:13px;border-top:1px solid rgba(255,255,255,0.08)}
+  footer.methodo-foot a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body class="methodo-page">
+
+<nav class="nav" id="nav">
+  <a href="/" class="brand" aria-label="Retour à l'accueil">
+    <span class="mk" aria-hidden="true"></span>
+    <span class="brand-name">Carnet Plein<sup style="font-size:0.55em">®</sup> <b>by Mad Makers</b></span>
+  </a>
+  <a class="nav-cta" href="https://calendly.com/directedbymaick/audit-carnet-plein" target="_blank" rel="noopener">Réserver l'audit <span aria-hidden="true">↗</span></a>
+</nav>
+
+<!-- HERO -->
+<section class="methodo-hero">
+  <div class="container">
+    <a href="/" class="backlink">← Retour à carnetplein.mad-makers.fr</a>
+
+    <div class="methodo-eyebrow">FOUNDER'S CASE · TRANSPARENCE RADICALE</div>
+
+    <h1 class="methodo-h1">On applique<br/>notre propre méthode.<br/><em>Et on publie les chiffres.</em></h1>
+
+    <p class="methodo-sub">On vend Carnet Plein® à des plombiers-chauffagistes. C'est leur méthode qu'on déploie. Logiquement, on devrait l'appliquer à nous-mêmes. Donc on le fait. Et on publie nos chiffres réels chaque 1er du mois, en vidéo, sans filtre. Si on est crédibles sur nos propres résultats, on est crédibles sur les leurs.</p>
+
+    <p style="font-size:14px;color:#a9a69f;line-height:1.55;max-width:62ch;font-style:italic">Note importante : ce n'est pas un cas client. C'est nous-mêmes. C'est labélisé « Founder's case » partout, pour zéro ambiguïté.</p>
+  </div>
+</section>
+
+<!-- LOOM EXPLICATIF -->
+<section class="methodo-section">
+  <div class="container">
+    <div class="methodo-eyebrow">VIDÉO D'INTRODUCTION</div>
+    <h2>Pourquoi on documente <em>publiquement.</em></h2>
+    <p class="lead">Loom de 4 minutes face caméra : Rayan explique pourquoi on a choisi cette posture de transparence radicale, ce qu'on va publier chaque mois, et l'état initial à T0 avant de commencer.</p>
+
+    <div class="loom-placeholder">
+      <div class="loom-placeholder-icon">▶</div>
+      <h4>Loom à venir</h4>
+      <p>Vidéo d'introduction Founder's case - publication prévue cette semaine</p>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD KPI -->
+<section class="methodo-section">
+  <div class="container">
+    <div class="methodo-eyebrow">DASHBOARD PUBLIC · MIS À JOUR LE 1ER DU MOIS</div>
+    <h2>Les chiffres réels<br/>de notre propre prospection.</h2>
+
+    <div class="dashboard-meta">
+      <span class="dashboard-status">Mise à jour en cours · prochaine publication 1er juin 2026</span>
+      <span class="dashboard-update">État T0 · 16 mai 2026</span>
+    </div>
+
+    <p class="lead">Métriques mensuelles de l'activité prospection + visibilité Carnet Plein® appliquée à Mad Makers elle-même. Les valeurs en gris sont à T0 (point de départ) - elles évolueront chaque mois.</p>
+
+    <div class="kpi-grid">
+
+      <article class="kpi-card">
+        <div class="kpi-label">Prospects sourcés cumul</div>
+        <div class="kpi-value">5 108</div>
+        <div class="kpi-trend">RGE artisans IDF + HDF + Grand Est</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">Emails envoyés ce mois</div>
+        <div class="kpi-value pending">0</div>
+        <div class="kpi-trend">Lancement batch 1 prévu cette semaine</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">Taux de réponse</div>
+        <div class="kpi-value pending">--</div>
+        <div class="kpi-trend">Référentiel cible : 3-5%</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">RDV Calendly bookés</div>
+        <div class="kpi-value pending">0</div>
+        <div class="kpi-trend">Référentiel cible : 1-2% des envois</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">Clients Pilote signés</div>
+        <div class="kpi-value">0 / 5</div>
+        <div class="kpi-trend">Objectif S3 : 3 · S4 : 5</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">CA Mad Makers cumul</div>
+        <div class="kpi-value pending">0 €</div>
+        <div class="kpi-trend">Premier encaissement attendu S3-S4</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">Visites organiques site</div>
+        <div class="kpi-value pending">--</div>
+        <div class="kpi-trend">Données GA4 disponibles à M+1</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">Avis Google Mad Makers</div>
+        <div class="kpi-value">0</div>
+        <div class="kpi-trend">À cumuler post-livraison Pilotes</div>
+      </article>
+
+    </div>
+
+    <p style="margin-top:32px;color:#a9a69f;font-size:13.5px;line-height:1.55;max-width:62ch">À partir du 1er juin 2026, chaque mois ce dashboard sera actualisé avec les chiffres réels (en hausse, en baisse, ou stables - on publie tout). Une vidéo Loom de 3-5 minutes accompagnera chaque mise à jour, commentant ce qui a marché et ce qu'on ajuste.</p>
+  </div>
+</section>
+
+<!-- ARCHIVE DES VIDÉOS MENSUELLES -->
+<section class="methodo-section">
+  <div class="container">
+    <div class="methodo-eyebrow">ARCHIVE DES MISES À JOUR MENSUELLES</div>
+    <h2>Toutes les vidéos mensuelles<br/><em>en un endroit.</em></h2>
+    <p class="lead">À mesure que les mois passent, chaque mise à jour s'ajoutera ici. Vous pourrez revoir l'évolution dans le temps, sans filtres, sans cherry-picking.</p>
+
+    <div class="archive-grid">
+
+      <article class="archive-card placeholder">
+        <div class="archive-date">JUIN 2026 · À VENIR</div>
+        <h4>Mois 1 · Premier batch envoyé</h4>
+        <p>Premiers retours du batch d'envoi initial. Taux de réponse réel vs cible. Premiers RDV Calendly.</p>
+        <a href="#">À venir le 1er juin</a>
+      </article>
+
+      <article class="archive-card placeholder">
+        <div class="archive-date">JUILLET 2026 · À VENIR</div>
+        <h4>Mois 2 · Premières signatures</h4>
+        <p>État des signatures Pilote. Conversion RDV → contrat. Ajustements du discours commercial.</p>
+        <a href="#">À venir le 1er juillet</a>
+      </article>
+
+      <article class="archive-card placeholder">
+        <div class="archive-date">AOÛT 2026 · À VENIR</div>
+        <h4>Mois 3 · Bilan premier trimestre</h4>
+        <p>5 Pilotes signés ou pas ? Apprentissages du trimestre. Stratégie pour la suite.</p>
+        <a href="#">À venir le 1er août</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI ON FAIT ÇA -->
+<section class="methodo-section why-section">
+  <div class="container">
+    <div class="methodo-eyebrow">POURQUOI ON SE MET À NU</div>
+    <h2>4 raisons qui font<br/>que ça compte.</h2>
+
+    <ol class="why-list">
+      <li><strong>Crédibilité par démonstration.</strong> On vend une méthode, donc le minimum est de l'appliquer à nous-mêmes. Si notre propre prospection ne marche pas, on n'a pas le droit de la vendre.</li>
+      <li><strong>Anti-bullshit assumé.</strong> Le marché des agences web pour artisans est saturé de promesses creuses. On préfère montrer des chiffres modestes mais réels que des résultats inventés ou cherry-pickés.</li>
+      <li><strong>Apprentissage public.</strong> On ne prétend pas être parfaits. Chaque mois, on partage ce qui a marché ET ce qu'on a raté. Notre transparence sur les ratés est ce qui rend crédibles nos succès.</li>
+      <li><strong>Signal de fraîcheur Google.</strong> Une page dashboard mise à jour chaque mois + une vidéo Loom mensuelle = Google voit que le site vit. Effet SEO concret sur la durée.</li>
+    </ol>
+  </div>
+</section>
+
+<footer class="methodo-foot">
+  <div class="container">
+    <p>Founder's case · Carnet Plein® by Mad Makers · Romainville (93) · <a href="/">Retour au site</a> · <a href="/vague-pilote">Vague Pilote 2026</a> · <a href="/mentions-legales">Mentions légales</a></p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
