@@ -149,6 +149,27 @@ Aujourd'hui, vous avez (cochez tout ce qui s'applique)
 
 ---
 
+### Q5bis - Si vous avez déjà un site internet
+
+**Type :** Dropdown / Select (conditionnel - n'apparaît que si Q5 inclut "Un site internet")
+**Label :**
+```
+Concernant votre site internet actuel
+```
+**Description :**
+```
+Cette réponse nous permet de vous proposer la bonne formule Carnet Plein® (Intégral si refonte / optimisation possible, Focus si vous souhaitez le conserver tel quel).
+```
+**Options :**
+- Je n'ai pas de site (je démarre de zéro)
+- J'ai un site, mais je suis ouvert à le refaire entièrement
+- J'ai un site récent ou que j'apprécie, mais ouvert à l'optimiser
+- J'ai un site et je ne veux PAS qu'on y touche (formule Focus)
+
+**Required :** Oui si Q5 inclut "Un site internet"
+
+---
+
 ### Q6 - Votre objectif principal pour les 12 prochains mois
 
 **Type :** Long text (paragraph)
@@ -203,11 +224,16 @@ Comment ça va se passer :
    est fait pour vous ou pas.
 
 4. Si oui, je vous envoie le devis détaillé et le contrat dans
-   les 48 heures. Vous démarrez avec la cohort suivante (3 artisans
-   max, 1er lundi du mois) qui inclut un kick-off groupé + une
-   visio cohort mensuelle + un WhatsApp group entre vous trois et
-   moi. Si non, je vous oriente vers la ressource gratuite la plus
-   utile.
+   les 48 heures. Selon votre situation (site existant ou pas),
+   on vous proposera soit Carnet Plein® Intégral (5 000 € HT setup
+   avec création ou optimisation du site, 6 composants) soit
+   Carnet Plein® Focus (3 500 € HT setup sans le composant Site,
+   pour ceux qui gardent leur site actuel tel quel, 5 composants).
+   Vous démarrez avec la cohort suivante (3 artisans max, 1er
+   lundi du mois) qui inclut un kick-off groupé + une visio cohort
+   mensuelle + un WhatsApp group entre vous trois et moi.
+   Si pas de fit, je vous oriente vers la ressource gratuite
+   la plus utile.
 
 Pour gagner du temps le jour J, deux choses à préparer si possible
 (5 minutes max, pas besoin de vous prendre la tête) :
@@ -474,9 +500,10 @@ Après les 20 minutes, tu décides "FIT" ou "NOT FIT" selon ces critères. C'est
 - Zone géographique dans les 3 régions cibles (IDF, HDF, Grand Est)
 - Taille : 1 à 5 salariés (cible parfaite) ; jusqu'à 10 acceptable
 - Posture : ouverture, écoute, pas dans le défi systématique du prix
-- Capacité de payer 5 000 € setup en 1 à 6 fois (signal pendant l'appel)
+- Capacité de payer 3 500 € (Focus) ou 5 000 € (Intégral) setup en 1 à 6 fois
 - Pas en surcharge actuelle d'autres prestataires concurrents
 - Compatibilité humaine : tu sens que tu vas pouvoir bosser ensemble 12 mois
+- **Formule choisie clairement** : si site refusable → Intégral. Si site sanctuarisé → Focus. Pas de flou.
 
 ### NOT FIT - On envoie les 2 ressources gratuites et on remercie
 - Hors métier (pourra demander ressources Mad Makers générales)

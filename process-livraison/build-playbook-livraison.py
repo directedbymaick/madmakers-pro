@@ -61,7 +61,7 @@ TIMELINE_J0_J14 = [
 COMPOSANTS_DETAIL = [
     {
         "num": "01",
-        "nom": "Site web professionnel",
+        "nom": "Site web + SEO on-page + pages géolocalisées (Intégral uniquement - 3 cas)",
         "stack": [
             "Hébergement : Vercel (UE, RGPD-compliant)",
             "Médias lourds : Cloudflare R2 (vidéos hero, photos brutes)",
@@ -69,46 +69,64 @@ COMPOSANTS_DETAIL = [
             "Fonts : Bunny Fonts (Geist) ou typo brand client",
             "Versioning : GitHub (1 repo par client, branche main = prod)",
             "DNS : cible cname.vercel-dns.com",
+            "Pour l'optimisation site existant : accès admin du site source (WordPress, Wix, Webflow, code custom)",
+            "SEO on-page : balises title/meta optimisées, schema.org LocalBusiness, FAQPage si pertinent, sitemap.xml généré auto, robots.txt explicite",
+            "Pages services géolocalisées : 1 template page-service par ville-cible, contenu unique 400-600 mots, lien interne depuis nav principale et footer",
         ],
         "phases": [
-            ("Phase 1 - Récup contenus (J+1 à J+5)", "Logos, photos initiales, copy validée client, références à mettre en avant, certifications, marques partenaires."),
-            ("Phase 2 - Setup repo + template (J+8)", "Fork du template Mad Makers Pro vers repo dédié client. Adaptation palette, typo, sections. Branch main = prod."),
-            ("Phase 3 - Customisation (J+9 à J+11)", "Sections : hero, services, zone géographique, expérience, photos chantiers, avis, contact, mentions légales. Inclusion schema.org local business."),
-            ("Phase 4 - Quality gates (J+11)", "Lighthouse mobile ≥ 90 sur perf et accessibilité. Tests browser : Chrome / Safari iOS / Firefox / Edge. axe DevTools 0 erreur critique. Vérification mentions légales conformes (RGS, RGPD, médiateur conso)."),
-            ("Phase 5 - Validation client (J+13)", "Démo URL preview Vercel. Récup corrections par email ou Notion. Itération si besoin sous 24h."),
-            ("Phase 6 - Mise en live (J+14)", "Config DNS chez registrar du client. Propagation 24h max. Surveillance status.vercel.com pendant 48h."),
+            ("Décision au kickoff (J+7)", "Trois cas selon situation client. CAS A : pas de site, ou site à refaire → CRÉATION (template Mad Makers Pro adapté). CAS B : site existant à conserver mais optimisable → OPTIMISATION (SEO on-page, vitesse, conversion, RGPD). CAS C : site existant intouchable (client refuse tout accès) → FORMULE FOCUS, ce composant n'est PAS livré et le tarif descend à 3 500 € setup."),
+            ("Phase 1 - Récup contenus (J+1 à J+5) - Cas A et B", "Cas A : logos, photos initiales, copy validée client, références, certifications, marques partenaires. Cas B : audit complet du site existant (Lighthouse, axe, SEO actuel) + accès technique (admin CMS, FTP, ou repo)."),
+            ("Phase 2 - Setup (J+8) - Cas A", "Fork du template Mad Makers Pro vers repo dédié client. Adaptation palette, typo, sections. Branch main = prod."),
+            ("Phase 2 - Plan d'optimisation chiffré (J+8) - Cas B", "Document 2 pages : top 10 actions priorisées (impact x effort). Validation client avant exécution."),
+            ("Phase 3 - Customisation (J+9 à J+11) - Cas A", "Sections : hero, services, zone géographique, expérience, photos chantiers, avis, contact, mentions légales. Inclusion schema.org local business."),
+            ("Phase 3bis - Pages services géolocalisées (J+10 à J+12) - Cas A et B", "Identification de 3 à 5 villes-cibles dans la zone de chalandise (validation client). Création d'1 page dédiée par ville (URL: /[metier]-[ville], par exemple /plombier-roubaix). Contenu unique 400-600 mots par page : présentation du service, références chantiers locales si disponibles, mention zone d'intervention contextualisée, NAP cohérent, lien interne depuis nav principale et footer. Schema.org Service avec areaServed précis."),
+            ("Phase 3 - Exécution des correctifs (J+9 à J+12) - Cas B", "Application des actions du plan : SEO on-page (title, meta, hn, alt), optimisation vitesse (images webp, lazy load, minification), accessibilité (contrastes, labels formulaires), conformité RGPD (cookies, politique), mentions légales conformes."),
+            ("Phase 4 - Quality gates (J+11 à J+13)", "Cas A : Lighthouse mobile ≥ 90 sur perf et accessibilité, tests browser Chrome/Safari/Firefox/Edge, axe DevTools 0 erreur critique. Cas B : passage avant/après des Lighthouse score, vérification que TOUS les correctifs sont en place."),
+            ("Phase 5 - Validation client (J+13)", "Cas A : démo URL preview Vercel. Cas B : démo sur staging ou directement en prod selon CMS. Récup corrections sous 24h max."),
+            ("Phase 6 - Mise en live (J+14) - Cas A", "Config DNS chez registrar du client. Propagation 24h max. Surveillance status.vercel.com pendant 48h."),
+            ("Phase 6 - Documentation finale (J+14) - Cas B", "Document remis au client : récap des actions menées, état avant/après, recommandations pour la suite."),
         ],
         "quality_gates": [
-            "Lighthouse mobile : Performance ≥ 90, Accessibilité ≥ 95, SEO ≥ 95, Best Practices ≥ 95",
+            "Lighthouse mobile : Performance ≥ 90, Accessibilité ≥ 95, SEO ≥ 95, Best Practices ≥ 95 (Cas A et B post-correctifs)",
             "Aucune erreur dans la console navigateur",
             "Tests effectués sur iOS Safari + Android Chrome (devices réels ou BrowserStack)",
             "Mentions légales complètes : SIRET, RCS, TVA, assurance décennale, médiateur conso",
             "Schema.org LocalBusiness avec NAP (Name, Address, Phone) cohérent avec GBP",
+            "Schema.org Service avec areaServed précis sur chaque page géolocalisée",
+            "3 à 5 pages services géolocalisées créées (URL clean, contenu unique, NAP cohérent, lien interne nav+footer)",
             "Favicon, OG image, meta description renseignés",
             "Formulaire de contact testé : envoi reçu + accusé client",
+            "Cas B uniquement : document de récapitulatif avant/après envoyé au client",
         ],
-        "tools": "Vercel CLI, GitHub Desktop, VS Code, Lighthouse, axe DevTools, BrowserStack (optionnel)",
+        "tools": "Vercel CLI, GitHub Desktop, VS Code, Lighthouse, axe DevTools, BrowserStack (optionnel). Pour Cas B : accès au CMS du client (WordPress, Wix, etc.) ou FTP.",
         "erreurs": [
             "Oublier le NAP cohérent entre site et GBP : Google considère 2 entités différentes, dilue le ranking",
             "Pousser sans tester sur iOS Safari : 30% des artisans clients ouvrent depuis iPhone",
             "Ne pas activer le HTTPS forcé sur Vercel (auto désormais, mais à vérifier)",
+            "Cas B : modifier un site existant sans backup préalable (toujours snapshot complet avant intervention)",
+            "Promettre des résultats Cas B alors que le CMS limite ce qui est techniquement possible (par exemple Wix très contraint sur le SEO technique)",
+            "Accepter un client en formule Focus sans contrat clarifiant que le site n'est pas dans le périmètre (litige garanti à 90 jours)",
         ],
     },
     {
         "num": "02",
-        "nom": "Google Business Profile",
+        "nom": "Google Business Profile + SEO local (Domination Local Pack)",
         "stack": [
             "Compte Google admin secondaire (jamais propriétaire principal)",
             "App mobile GBP iOS / Android pour réponses rapides",
             "Whitespark Local Citation Finder (audit annuaires - optionnel)",
             "Spreadsheet de suivi mensuel des métriques (Google Sheets)",
+            "Outil tracking positions Google : Local Falcon (free tier) ou SerpRobot pour suivi 10-15 mots-clés cibles",
+            "Annuaires métier : Pages Jaunes, Travaux.com, BNI local, CMA, CAPEB, Habitatpresto, Yelp",
         ],
         "phases": [
-            ("Phase 1 - Audit 12 points (J+8)", "Suivre la checklist du Bonus #1. Identifier ce qui manque ou est mal renseigné. Documenter dans Notion."),
-            ("Phase 2 - Corrections (J+8 à J+10)", "Catégorie principale + secondaires, description longue (750 caractères max optimisés mots-clés métier+ville), attributs RGE et certifications, zones desservies (villes ou rayon)."),
+            ("Phase 1 - Audit 12 points (J+8)", "Suivre la checklist du Bonus #1. Identifier ce qui manque ou est mal renseigné. Documenter dans Notion. Capturer baseline (impressions, position GBP sur 5-10 requêtes test)."),
+            ("Phase 2 - Corrections GBP (J+8 à J+10)", "Catégorie principale + secondaires, description longue (750 caractères max optimisés mots-clés métier+ville), attributs RGE et certifications, zones desservies (villes ou rayon)."),
             ("Phase 3 - Photos catégorisées (J+9)", "Upload minimum 10 photos à T0, catégorisées : équipe, identité, intérieur (atelier), à l'extérieur (chantiers), produits, vidéo véhicule. Suivre règles Bonus #3."),
             ("Phase 4 - Premier Google Post (J+10)", "Post de bienvenue avec photo véhicule logoté + brève présentation. Programme un Post hebdomadaire à partir de J+14."),
             ("Phase 5 - Messagerie GBP (J+11)", "Activation messagerie GBP si le client est OK pour recevoir des messages directs. Configurer auto-réponse hors horaires."),
+            ("Phase 6 - Tracking positions (J+12)", "Setup Local Falcon ou SerpRobot avec 10-15 mots-clés cibles : combinaisons métier+ville (par exemple « plombier Roubaix », « chauffagiste Lille »), métier+département, requêtes urgence (« plombier urgence Roubaix »). Baseline capturée à J+12, suivi mensuel ensuite."),
+            ("Phase 7 - Citations annuaires (J+13 et continu)", "Vérification cohérence NAP sur Pages Jaunes, Travaux.com, Habitatpresto, Yelp. Création ou correction si nécessaire. Inscription BNI local et CAPEB régionale si pertinent. Liste documentée dans Notion."),
         ],
         "quality_gates": [
             "100% des 12 points du Bonus #1 cochés",
@@ -228,7 +246,9 @@ COMPOSANTS_DETAIL = [
         "phases": [
             ("Phase 1 - Kick-off groupé (1er lundi du mois, 60 min)", "Visio Zoom avec les 3 nouveaux artisans de la cohort. Tour de table 15 min (chaque artisan présente métier/zone/objectif en 5 min), présentation du programme et calendrier collectif 20 min, calage du KPI commun de cohort 15 min, Q&A 10 min. Création du WhatsApp group à l'issue."),
             ("Phase 2 - Visio individuelle mensuelle (45 min, mid-month)", "Visio 1:1 avec chaque client : tour de table 10 min, revue KPI 10 min, sujets prioritaires 20 min, action items 5 min. Notes Notion en live."),
-            ("Phase 3 - Visio cohort mensuelle (45 min, 1er mardi 18h par défaut)", "Visio à 4 (les 3 cohort members + Rayan). Tour de table wins du mois 15 min (5 min par artisan), tour de table blocages 15 min, conseil croisé entre pairs 10 min, annonces communes 5 min. Animation par Rayan, rôle de facilitateur."),
+            ("Phase 3 - Visio cohort stratégie (1er mardi 18h, 45 min)", "Visio à 4 (les 3 cohort members + Rayan). Tour de table wins du mois 15 min (5 min par artisan), tour de table blocages 15 min, conseil croisé entre pairs 10 min, annonces communes 5 min. Animation par Rayan, rôle de facilitateur."),
+            ("Phase 3bis - Atelier Devis cohort (3e mardi 18h, 45 min) - NOUVEAU", "Session dédiée à l'amélioration commerciale, format roleplay structuré. Posture explicite : Rayan = animateur/facilitateur, pas expert commercial. Les artisans se coachent entre eux en s'appuyant sur les frameworks Bonus #4 (Cialdini + 8 objections + relances). Programme type : (1) 5 min - check-in commercial du mois (devis signés/refusés), (2) 15 min - 1 artisan présente un devis récent refusé, les 2 autres + Rayan jouent le rôle du prospect, (3) 15 min - débriefing collectif : qu'est-ce qui aurait pu marcher ? Application des 7 leviers Cialdini, (4) 10 min - actions concrètes : chacun s'engage sur 1 modification de son prochain devis."),
+            ("Phase 3ter - Masterclass expert externe (1× par trimestre, 1h)", "Invité externe : commercial BTP, closer expérimenté, consultant Cialdini, ou jeune freelance en échange de visibilité. Sujets type : closing par téléphone, gestion objection prix, vendre la rénovation énergétique, comment relancer sans paraître insistant. Budget : 0 à 300€/session (négociable). Diffusion live + replay aux 3 artisans. Coût rentabilisé par l'effet sur les ventes."),
             ("Phase 4 - Animation WhatsApp group (continu, light)", "Modération légère : 1 check le matin, 1 check le soir. Animation par 1 message-clé par semaine (lundi : 'Wins de la semaine ?'). Pas de disponibilité 24/7 promise."),
             ("Phase 5 - Synthèse écrite (J+1 après chaque visio)", "Compte-rendu par email + Notion. Action items numérotés avec responsable et date. Pour la visio cohort : synthèse partagée dans le WhatsApp group."),
         ],
@@ -265,7 +285,8 @@ RYTHME_HEBDO = [
 
 RYTHME_MENSUEL = [
     ("1er lundi du mois", "Kick-off groupé visio 60 min avec les 3 nouveaux artisans de la cohort (si nouvelle cohort démarre ce mois). Création WhatsApp group cohort."),
-    ("1er mardi du mois 18h", "Visio cohort mensuelle 45 min : pour chaque cohort active, réunion des 3 artisans + toi. Animation par toi (rôle facilitateur)."),
+    ("1er mardi du mois 18h", "Visio cohort stratégie 45 min : pour chaque cohort active, réunion des 3 artisans + toi. Tour de table wins/blocages/conseils. Animation par toi (facilitateur)."),
+    ("3e mardi du mois 18h", "Atelier Devis cohort 45 min : roleplay structuré sur 1 devis récent refusé d'un des artisans. Application live des frameworks Cialdini (Bonus #4). Engagement de modifications concrètes pour le prochain devis."),
     ("1er du mois", "Collecte métriques GBP + GA4 du mois précédent. Sauvegarde dans Sheets de suivi."),
     ("3-4 du mois", "Rédaction reporting mensuel par client. Charte Carnet Plein®. 4-6 pages PDF."),
     ("5 du mois", "Envoi des reporting mensuels (email + PDF). Avant minuit, sans exception."),
@@ -276,6 +297,7 @@ RYTHME_MENSUEL = [
 
 RYTHME_TRIMESTRIEL = [
     ("Trimestre", "Revue stratégique étendue avec chaque client (1h30 visio). Bilan KPI cumulés. Ajustements priorités."),
+    ("Trimestre", "Masterclass expert externe en cohort (1h) : invité commercial BTP / closer / consultant Cialdini. Sujet précis (closing téléphone, objection prix, vendre rénovation énergétique). Diffusion live + replay aux 3 artisans."),
     ("Trimestre", "Sondage NPS auprès de chaque client (3 questions max)."),
     ("Trimestre", "Bilan financier interne : CA, marges, dépenses, charge prévue."),
 ]
@@ -1119,6 +1141,98 @@ def render_incidents():
 """
 
 
+def render_mitigations_roi():
+    return """
+<section class="page">
+  <div class="eyebrow">7 mitigations contre le risque « 3 clients, 0 résultat »</div>
+  <h1>Comment je m'assure de tenir<br>la promesse ROI au quotidien.</h1>
+
+  <p class="lead">Les chiffres de ROI dans le Plan de Production (1,5× à 3× le CA brut sur 12 mois) ne se réalisent que si j'applique ces 7 mitigations à chaque client. Sans ça, on glisse vers le scénario pessimiste et la garantie de continuité se déclenche.</p>
+
+  <div class="incident-card" style="border-left-color:#e0541b">
+    <h4 style="color:#e0541b">Mitigation 01 - Qualifier durement au Calendly</h4>
+    <div class="incident-symptom" style="color:#5a5d56">Symptôme à repérer : prospect avec fiche GBP déjà à 4,8★ et 150 avis</div>
+    <ol class="incident-proc">
+      <li>Filtrer hors-FIT ou basculer sur Focus si peu de marge de progression GBP</li>
+      <li>Préférer un prospect avec 8 avis et fiche médiocre à un prospect déjà optimisé</li>
+      <li>Documenter la qualification dans le CRM avec score de marge de progression (0-10)</li>
+    </ol>
+  </div>
+
+  <div class="incident-card" style="border-left-color:#e0541b">
+    <h4 style="color:#e0541b">Mitigation 02 - Poser un KPI annexe 1 PRUDENT</h4>
+    <div class="incident-symptom" style="color:#5a5d56">Symptôme à éviter : « +30 demandes/mois » alors que le client en a 8</div>
+    <ol class="incident-proc">
+      <li>Toujours KPI en pourcentage relatif (+50% sur 12 mois) plutôt qu'en valeur absolue</li>
+      <li>Le KPI doit être un indicateur que JE contrôle (impressions GBP, demandes via formulaire, nombre d'avis), pas un résultat business final (CA, signatures)</li>
+      <li>Le seuil garantie 80% appliqué à un KPI prudent reste atteignable</li>
+    </ol>
+  </div>
+
+  <div class="incident-card" style="border-left-color:#e0541b">
+    <h4 style="color:#e0541b">Mitigation 03 - Mesurer dès M+1, pas attendre M+6</h4>
+    <div class="incident-symptom" style="color:#5a5d56">Symptôme : pas de baseline mesurée au démarrage, pas d'alerte précoce</div>
+    <ol class="incident-proc">
+      <li>Capture GBP Insights complets à T0 (J+8, baseline)</li>
+      <li>Premier reporting M+1 doit déjà montrer des évolutions (impressions, photos vues)</li>
+      <li>Si à M+1 rien n'a bougé : diagnostic immédiat (technique, qualité, externe)</li>
+      <li>Ne pas attendre M+6 pour découvrir une dérive</li>
+    </ol>
+  </div>
+
+  <div class="incident-card" style="border-left-color:#e0541b">
+    <h4 style="color:#e0541b">Mitigation 04 - Verrouiller l'engagement client dans la pratique</h4>
+    <div class="incident-symptom" style="color:#5a5d56">Symptôme : client ne fournit pas les photos, ne déclenche pas les SMS d'avis</div>
+    <ol class="incident-proc">
+      <li>Section dédiée dans le reporting mensuel : « Engagements client respectés ce mois »</li>
+      <li>Photos fournies : X / 8 attendues. SMS avis déclenchés : Y / Z chantiers terminés. Devis Cialdini utilisé : oui/non/partiellement</li>
+      <li>Si 3 mois consécutifs en-dessous de 50% de respect : courrier RAR rappel article 07 + 08 du contrat</li>
+      <li>Documenté = défendable juridiquement si garantie réclamée alors que le client n'a pas tenu sa part</li>
+    </ol>
+  </div>
+
+  <div class="incident-card" style="border-left-color:#e0541b">
+    <h4 style="color:#e0541b">Mitigation 05 - Les 3 premiers clients = TARIF PILOTE</h4>
+    <div class="incident-symptom" style="color:#5a5d56">Symptôme à éviter : démarrer au plein tarif sans cas réel à montrer</div>
+    <ol class="incident-proc">
+      <li>Setup à -50% pour les 3 premiers clients : 2 500 € (Intégral) ou 1 750 € (Focus). Retainer 800 €/mois inchangé.</li>
+      <li>En échange : droit explicite de publier vrais résultats à 90 jours et 12 mois + témoignage vidéo + study case détaillée</li>
+      <li>Marge basse acceptée sur ces 3 premiers contre acquisition de cas vérifiables</li>
+      <li>Documenter dès le départ : « Vous bénéficiez du tarif Pilote en échange de votre accord pour publier vos résultats »</li>
+    </ol>
+  </div>
+
+  <div class="incident-card" style="border-left-color:#e0541b">
+    <h4 style="color:#e0541b">Mitigation 06 - Ne JAMAIS promettre de chiffres CA spécifiques</h4>
+    <div class="incident-symptom" style="color:#5a5d56">Symptôme à éviter : promettre « +20 000 € de CA garantis » en Calendly</div>
+    <ol class="incident-proc">
+      <li>Phrase autorisée : « Le ROI réel dépend de facteurs externes. Cas comparables : 1,5× à 3× l'investissement sur 12 mois. »</li>
+      <li>Phrase interdite : « Je te garantis 30 demandes de devis par mois »</li>
+      <li>Le contrat est cadré sur un KPI précis (annexe 1), pas sur un montant de CA final</li>
+      <li>Si pression du prospect pour des chiffres spécifiques : refuser poliment et proposer une visio dédiée pour étudier son cas</li>
+    </ol>
+  </div>
+
+  <div class="incident-card" style="border-left-color:#e0541b">
+    <h4 style="color:#e0541b">Mitigation 07 - Accepter qu'1 client sur 3 déclenche la garantie</h4>
+    <div class="incident-symptom" style="color:#5a5d56">Symptôme : panique à l'idée qu'une garantie se déclenche</div>
+    <ol class="incident-proc">
+      <li>Provision ~100h de prestation gratuite supplémentaire dans le P&L year 1</li>
+      <li>Considérer la garantie comme un coût d'apprentissage, pas un échec</li>
+      <li>Si aucune garantie déclenchée : tant mieux, marge nette plus élevée</li>
+      <li>Si toutes les garanties sont déclenchées : signe que la qualification au Calendly est mauvaise, à corriger</li>
+      <li>Communication transparente avec le client si garantie déclenchée : « On continue gratuitement, voici le plan pour atteindre l'objectif »</li>
+    </ol>
+  </div>
+
+  <div class="callout dark">
+    <h4>Le principe global de ces 7 mitigations</h4>
+    <p>Les 5 leviers de gain (GBP, Avis, Cialdini, Photos, Cohort) fonctionnent. Mais ils ne fonctionnent <strong>que si je qualifie bien, mesure tôt, documente tout, et accepte que les premiers clients soient un apprentissage</strong>. Le risque « 3 clients, 0 résultat » ne se règle pas par une offre plus complexe - il se règle par la rigueur opérationnelle de ces 7 mitigations appliquées systématiquement.</p>
+  </div>
+</section>
+"""
+
+
 def render_kpi():
     rows = "".join(
         f'<tr><td class="label">{nom}</td><td>{cible}</td></tr>'
@@ -1400,6 +1514,107 @@ Post-kick-off (sous 4h) :
   mensuelle (1er mardi du mois suivant)
 </pre>
   </div>
+
+  <div class="template-block">
+    <h4>T09 - Atelier Devis cohort (45 min, 3e mardi du mois 18h)</h4>
+<pre>ATELIER DEVIS COHORT [MOIS] - 45 min - 4 personnes
+
+POSTURE D'ANIMATION (à rappeler en intro)
+« Je ne suis pas un expert commercial. Je suis
+facilitateur. On va s'aider entre nous, en
+s'appuyant sur les frameworks Cialdini du Bonus #4.
+L'expertise vient de vos cas réels et des outils
+validés - pas de moi. »
+
+00:00 - 00:05 Check-in commercial du mois
+              Chaque artisan en 1 min : combien de
+              devis envoyés ? Combien signés ?
+              Quelle a été l'objection la plus
+              fréquente ?
+
+00:05 - 00:20 Présentation d'un cas par UN artisan
+              (rotation chaque mois - tour des 3)
+              - Présente un devis envoyé et refusé
+              - Contexte du prospect (métier client,
+                projet, budget, prix proposé)
+              - Ce que le prospect a dit pour refuser
+
+00:20 - 00:35 ROLEPLAY - les 2 autres + moi
+              jouent le prospect
+              - On rejoue la conversation
+              - L'artisan refait sa présentation
+              - On simule les objections : prix,
+                délai, comparaison concurrent, doute
+              - L'artisan applique les leviers
+                Cialdini du Bonus #4 (réciprocité,
+                preuve sociale, autorité, rareté)
+
+00:35 - 00:42 DÉBRIEF collectif
+              - Qu'est-ce qui a marché ?
+              - Qu'est-ce qui aurait pu marcher
+                différemment ?
+              - Quel levier Cialdini était sous-utilisé ?
+              - Les 2 autres partagent une astuce
+                qu'ils utilisent
+
+00:42 - 00:45 ENGAGEMENTS chacun
+              Chaque artisan s'engage sur 1
+              modification concrète à appliquer
+              sur son prochain devis (ou
+              relance) cette semaine.
+
+Post-atelier (sous 24h) :
+- Synthèse 5 lignes dans le WhatsApp group cohort
+- Action items individuels dans Notion
+- Rappel au prochain atelier : check du résultat
+  des engagements pris
+</pre>
+  </div>
+
+  <div class="template-block">
+    <h4>T10 - Briefing expert masterclass trimestrielle</h4>
+<pre>BRIEFING EXPERT - Masterclass cohort [TRIMESTRE]
+
+Audience : 3 artisans plombiers-chauffagistes
+en région [REGION], cohorts actives Mad Makers.
+Carnet Plein® - programme de 12 mois.
+
+Sujet de la masterclass : [À CALER AVEC L'EXPERT]
+Suggestions de sujets :
+- « Closer un devis PAC sans baisser le prix »
+- « Gérer l'objection 'je vais réfléchir' en BTP »
+- « Vendre la rénovation énergétique en 2026 »
+- « Relancer 3 fois sans paraître insistant »
+- « Le pitch téléphonique en 3 minutes »
+
+Format : 1h en visio
+- 30 min de masterclass (vous présentez)
+- 20 min de Q&A avec les artisans
+- 10 min de roleplay (1 artisan présente un cas,
+  vous appliquez votre méthode)
+
+Rémunération proposée :
+- Option 1 : 200-300 € forfait visibilité
+- Option 2 : Échange visibilité - vous obtenez
+  l'audience Mad Makers (LinkedIn + Notion +
+  futur blog) + témoignage écrit
+- Option 3 : 50% sur leads que vous nous renvoyez
+  côté commercial coaching (si applicable)
+
+Date proposée : [DATE]
+Plateforme : Zoom ou Google Meet
+Enregistrement : oui (pour replay aux artisans),
+                 OK pour vous ?
+
+Confirmez votre disponibilité et le sujet
+qui vous va le mieux, puis je vous envoie
+les coordonnées des 3 artisans pour
+contextualiser.
+
+Merci d'avance,
+Rayan - Mad Makers
+</pre>
+  </div>
 </section>
 
 <section class="page">
@@ -1540,6 +1755,7 @@ def render_html():
 
     parts.append(render_rythme())
     parts.append(render_incidents())
+    parts.append(render_mitigations_roi())
     parts.append(render_kpi())
     parts.append(render_stack())
     parts.append(render_templates_annexe())

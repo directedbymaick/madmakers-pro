@@ -35,22 +35,30 @@ PRESTATAIRE = {
 COMPOSANTS = [
     {
         "num": "01",
-        "nom": "Site web professionnel",
+        "nom": "Site web professionnel + SEO on-page + pages géolocalisées (formule Intégral uniquement)",
         "details": [
-            "Conception, design et developpement d'un site web vitrine optimise pour la conversion en demandes de devis qualifiees",
-            "Hebergement sur infrastructure Vercel (UE, conforme RGPD), nom de domaine inclus pour la duree du contrat",
-            "Maintenance technique : mises a jour de securite, monitoring uptime, sauvegardes automatiques quotidiennes",
-            "Modifications mineures incluses (mise a jour de coordonnees, horaires, photos chantiers, prix indicatifs)",
+            "Selon la formule choisie au moment de la signature : (a) Création complète d'un nouveau site web, ou (b) Optimisation du site web existant du Client (SEO on-page, vitesse, conversion, accessibilité WCAG 2.1 AA, conformité RGPD, mentions légales)",
+            "Pour la création : conception, design et développement d'un site web vitrine optimisé pour la conversion en demandes de devis qualifiées",
+            "Pour l'optimisation : audit complet du site existant, plan d'optimisation chiffré, mise en œuvre des correctifs (sous réserve d'accès technique au site)",
+            "SEO on-page complet : balises title et meta optimisées par page, hiérarchie des titres (h1/h2/h3), texte alternatif sur images, schema.org LocalBusiness et FAQPage, NAP cohérent avec la fiche GBP, sitemap.xml et robots.txt, redirections 301 si refonte d'un site existant",
+            "3 à 5 pages services géolocalisées : 1 page dédiée par ville-cible (par exemple « Plombier Lille », « Plombier Roubaix »), chacune optimisée pour la requête locale longue traîne, avec contenu unique de 400 à 600 mots, mentions zones d'intervention et coordonnées contextualisées",
+            "Hébergement sur infrastructure Vercel (UE, conforme RGPD), nom de domaine inclus pour la durée du contrat (dans le cas d'une création de site)",
+            "Maintenance technique : mises à jour de sécurité, monitoring uptime, sauvegardes automatiques quotidiennes",
+            "Modifications mineures incluses (mise à jour de coordonnées, horaires, photos chantiers, prix indicatifs)",
+            "EXCEPTION FORMULE FOCUS : ce composant 01 n'est PAS inclus dans la formule Carnet Plein® Focus. Le Client conserve son site existant tel quel sans intervention du Prestataire. Le tarif est ajusté en conséquence (cf. article 05).",
         ],
     },
     {
         "num": "02",
-        "nom": "Google Business Profile (fiche Google)",
+        "nom": "Google Business Profile + SEO local (Domination Local Pack)",
         "details": [
-            "Audit initial des 12 points cles de la fiche existante (ou creation complete si inexistante)",
-            "Optimisation des categories, descriptions, attributs, zones desservies",
+            "Audit initial des 12 points cles de la fiche existante (ou creation complete si inexistante) selon la methode du Bonus #1",
+            "Optimisation des categories (primaire et secondaires), descriptions courte et longue (mots-cles ville+metier), attributs metier, zones desservies, horaires standards et speciaux",
             "Mise en place des Google Posts hebdomadaires (1 a 2 publications par semaine, themes adaptes a la saison metier)",
-            "Suivi mensuel des metriques GBP : impressions, recherches, appels, demandes d'itineraire",
+            "Upload initial de 10 photos categorisees (equipe, identite, interieur, exterieur, produits) puis enrichissement continu (cf. composant 05)",
+            "Suivi mensuel des metriques GBP : impressions, recherches, appels, demandes d'itineraire, photos vues, mots-cles de decouverte",
+            "Tracking des positions sur 10-15 requetes locales prioritaires (mots-cles metier+ville et metier+departement)",
+            "Citations sur annuaires metier de reference (Pages Jaunes, Travaux.com, BNI, CMA, CAPEB) pour renforcer la coherence NAP et l'autorite locale",
         ],
     },
     {
@@ -83,11 +91,13 @@ COMPOSANTS = [
     },
     {
         "num": "06",
-        "nom": "Accompagnement et coaching (incluant dimension cohort)",
+        "nom": "Accompagnement et coaching (1:1 + cohort + Atelier Devis + masterclass)",
         "details": [
             "1 point d'etape individuel mensuel en visioconference (45 minutes) entre le Prestataire et le Client",
             "Kick-off groupe le 1er lundi du mois de demarrage : visioconference de 60 minutes reunissant les 3 artisans de la cohort et le Prestataire (presentation mutuelle, presentation du programme, calage du KPI commun)",
-            "1 visio cohort mensuelle de 45 minutes reunissant les 3 artisans de la cohort en cours et le Prestataire (partage des wins du mois, blocages, conseils croises entre pairs)",
+            "1 visio cohort strategie mensuelle (1er mardi du mois, 45 minutes) reunissant les 3 artisans de la cohort en cours et le Prestataire (partage des wins du mois, blocages, conseils croises entre pairs)",
+            "1 Atelier Devis cohort mensuel (3e mardi du mois, 45 minutes) : format roleplay structure dedie a l'amelioration commerciale, application des frameworks Cialdini (Bonus #4) sur des cas reels de devis envoyes/refuses. Posture du Prestataire : facilitateur, pas expert commercial.",
+            "1 masterclass d'expert externe par trimestre (1 heure en visioconference) : invite specialise commercial BTP / closer / consultant Cialdini, sur sujet precis (closing telephonique, gestion objection prix, vendre la renovation, etc.). Replay accessible aux artisans.",
             "Groupe WhatsApp prive entre les 3 artisans de la cohort et le Prestataire pour l'entraide rapide et l'animation legere (modere par le Prestataire, sans engagement de disponibilite 24/7)",
             "Acces a un canal de communication direct individuel (email, WhatsApp avec le Prestataire) pour les questions courantes, reponse sous 48h ouvrees",
             "Conseils strategiques sur les actions metier qui ne sont pas du ressort du Prestataire (devis, relances clients, RGE, etc.)",
@@ -829,9 +839,13 @@ def render_art_05():
       <span class="article-title">Tarifs et modalités de paiement</span>
     </div>
     <div class="article-body">
-      <p>En contrepartie de la Prestation décrite à l'article 03, le Client s'engage à régler au Prestataire les sommes ci-après détaillées.</p>
+      <p>En contrepartie de la Prestation décrite à l'article 03, le Client s'engage à régler au Prestataire les sommes ci-après détaillées, en fonction de la formule choisie au moment de la signature.</p>
 
-      <h4>Tarification</h4>
+      <h4>Choix de la formule (à cocher au moment de la signature)</h4>
+      <p style="font-size:10pt;line-height:1.7">☐ <strong>Carnet Plein® Intégral</strong> - 5 000 € HT setup (les 6 composants incluant Site web)</p>
+      <p style="font-size:10pt;line-height:1.7">☐ <strong>Carnet Plein® Focus</strong> - 3 500 € HT setup (5 composants, sans le Site web : le Client conserve son site existant tel quel)</p>
+
+      <h4>Tarification - Formule Intégral</h4>
       <table class="field-table">
         <tr><td class="label">Forfait de setup (à la signature)</td><td class="value">5 000 € HT</td></tr>
         <tr><td class="label">Retainer mensuel (à partir du 2e mois)</td><td class="value">800 € HT / mois</td></tr>
@@ -841,12 +855,27 @@ def render_art_05():
         <tr><td class="label">Total TTC sur 12 mois</td><td class="value">16 560 € TTC</td></tr>
       </table>
 
-      <h4>Modalités de paiement</h4>
+      <h4>Tarification - Formule Focus</h4>
+      <table class="field-table">
+        <tr><td class="label">Forfait de setup (à la signature)</td><td class="value">3 500 € HT</td></tr>
+        <tr><td class="label">Retainer mensuel (à partir du 2e mois)</td><td class="value">800 € HT / mois (identique)</td></tr>
+        <tr><td class="label">Durée du retainer</td><td class="value">11 mois (mois 2 à mois 12)</td></tr>
+        <tr><td class="label">Total HT sur 12 mois</td><td class="value">12 300 € HT</td></tr>
+        <tr><td class="label">TVA applicable</td><td class="value">20% (prestation de services B2B)</td></tr>
+        <tr><td class="label">Total TTC sur 12 mois</td><td class="value">14 760 € TTC</td></tr>
+      </table>
+
+      <div class="callout">
+        <h4>Différence de périmètre entre les deux formules</h4>
+        <p>La formule <strong>Focus</strong> exclut uniquement le composant 01 (Site web professionnel). Les 5 autres composants sont identiques entre les deux formules (Google Business Profile, système d'avis, reporting mensuel, gestion des photos chantiers, accompagnement et coaching incluant la cohort). Les 4 bonus livrables sont remis dans les deux formules.</p>
+      </div>
+
+      <h4>Modalités de paiement (applicables aux deux formules)</h4>
       <p>Le Client peut opter, à sa convenance et au moment de la signature, pour l'une des trois modalités suivantes :</p>
       <ol>
-        <li><strong>Paiement comptant intégral</strong> du forfait setup à la signature (5 000 € HT), puis prélèvement / virement mensuel récurrent de 800 € HT chaque 1er du mois à partir du mois 2.</li>
-        <li><strong>Paiement en 3 fois sans frais</strong> du forfait setup : 3 × 1 666,67 € HT prélevés à J0, J+30, J+60.</li>
-        <li><strong>Paiement en 6 fois avec 2% d'agios</strong> du forfait setup : 6 × 850 € HT prélevés mensuellement à partir de la signature.</li>
+        <li><strong>Paiement comptant intégral</strong> du forfait setup à la signature (5 000 € HT en Intégral ou 3 500 € HT en Focus), puis prélèvement / virement mensuel récurrent de 800 € HT chaque 1er du mois à partir du mois 2.</li>
+        <li><strong>Paiement en 3 fois sans frais</strong> du forfait setup : 3 versements égaux prélevés à J0, J+30, J+60 (soit 3 × 1 666,67 € HT en Intégral ou 3 × 1 166,67 € HT en Focus).</li>
+        <li><strong>Paiement en 6 fois avec 2% d'agios</strong> du forfait setup : 6 versements mensuels à partir de la signature (soit 6 × 850 € HT en Intégral ou 6 × 595 € HT en Focus).</li>
       </ol>
 
       <h4>Moyens de paiement acceptés</h4>
