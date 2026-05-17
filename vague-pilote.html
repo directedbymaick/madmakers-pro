@@ -33,7 +33,8 @@
   .pilote-page{background:var(--encre);color:var(--paper);min-height:100vh;position:relative;overflow-x:hidden}
   .pilote-hero{padding:120px 0 80px;position:relative}
   .pilote-hero::before{content:"";position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(224,84,27,0.30) 0%,transparent 60%);pointer-events:none}
-  .pilote-eyebrow{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:0.18em;color:var(--accent);text-transform:uppercase;margin-bottom:24px;display:inline-flex;align-items:center;gap:10px}
+  .pilote-eyebrow{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:0.18em;color:var(--accent);text-transform:uppercase;margin:0 0 24px 32px;display:inline-flex;align-items:center;gap:10px}
+  @media (max-width:780px){.pilote-eyebrow{margin-left:16px}}
   .pilote-eyebrow::before{content:"";width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s ease-in-out infinite}
   .pilote-h1{font-size:clamp(40px,7vw,84px);font-weight:600;line-height:0.95;letter-spacing:-0.025em;color:#fff;margin:0 0 32px;max-width:18ch}
   .pilote-h1 em{color:var(--accent);font-style:italic;font-family:var(--f-accent,'Geist',serif)}
@@ -119,18 +120,18 @@
 
     <h1 class="pilote-h1">5 places.<br/><em>Tarif fondateur.</em><br/>Pour de vrais cas.</h1>
 
-    <p class="pilote-sub">On démarre l'Accélérateur Carnet Plein® avec 5 artisans pionniers à <strong>-67% du tarif standard</strong> (1 500 € + 250 €/mois au lieu de 5 000 € + 800 €/mois). En échange : vous acceptez de devenir l'un de nos premiers cas réels documentés. Chiffres, photos avant/après, témoignage à 3, 6 et 12 mois. C'est tout.</p>
+    <p class="pilote-sub">On démarre l'Accélérateur Carnet Plein® avec 5 artisans pionniers à <strong>-67% du tarif normal</strong> (1 500 € + 250 €/mois au lieu de 5 000 € + 800 €/mois). En échange : vous acceptez de devenir l'un de nos premiers cas réels documentés. Chiffres, photos avant/après, témoignage à 3, 6 et 12 mois. C'est tout.</p>
 
     <div class="pilote-counter">
       <strong>3</strong>
-      <span class="lbl">places restantes<br/>sur 5</span>
+      <span class="lbl">places restantes sur 5</span>
     </div>
 
     <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
       <a class="btn-primary" href="https://calendly.com/directedbymaick/audit-carnet-plein" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#fff;padding:18px 32px;border-radius:999px;font-family:var(--f-cta);font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none">
         Réserver l'audit gratuit <span aria-hidden="true">↗</span>
       </a>
-      <a href="#deal" style="color:#d6d3cb;font-family:var(--f-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;padding:8px 0">Voir le détail du deal ↓</a>
+      <a href="#deal" style="color:#d6d3cb;font-family:var(--f-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;padding:8px 0">Voir le détail de l'accord ↓</a>
     </div>
   </div>
 </section>
@@ -138,25 +139,25 @@
 <!-- LE DEAL EN DÉTAIL -->
 <section class="pilote-section" id="deal">
   <div class="container">
-    <div class="pilote-eyebrow">LE DEAL</div>
+    <div class="pilote-eyebrow">L'ACCORD</div>
     <h2>Voilà ce que vous obtenez,<br/><em>voilà ce que vous donnez.</em></h2>
-    <p class="lead">On joue cartes sur table. Le tarif fondateur est extraordinaire mais il a une contrepartie. Si l'échange vous convient, on signe et on démarre.</p>
+    <p class="lead">On joue cartes sur table. Le tarif fondateur est cassé mais il a une contrepartie. Si l'échange vous convient, on signe et on démarre.</p>
 
     <div class="deal-grid">
 
       <article class="deal-card pilote-card">
         <div class="deal-card-eyebrow">Ce que vous obtenez</div>
         <h3>Carnet Plein® Vague Pilote</h3>
-        <div class="deal-card-strike">13 800 € HT sur 12 mois (standard)</div>
-        <div class="deal-card-price">1 500 € <small>HT setup</small></div>
+        <div class="deal-card-strike">13 800 € HT sur 12 mois (tarif normal)</div>
+        <div class="deal-card-price">1 500 € <small>HT à la signature</small></div>
         <div class="deal-card-month"><strong>+ 250 €</strong> HT/mois sur 12 mois</div>
 
         <ul class="deal-list">
-          <li>Les 6 composants Carnet Plein® Intégral (site + SEO local + GBP + avis automatisés + reporting + photos + accompagnement)</li>
-          <li>Les 4 bonus livrables PDF</li>
-          <li>La cohort complète (kick-off, visios mensuelles, Atelier Devis, masterclass)</li>
-          <li>WhatsApp privé entre membres de la cohort</li>
-          <li>Garantie de continuité gratuite (si KPI &lt; 80% à 12 mois)</li>
+          <li>Les 6 composants Carnet Plein® Intégral (site + SEO local + fiche Google + avis automatisés + tableau de bord + photos + accompagnement)</li>
+          <li>Les 4 bonus à télécharger en PDF</li>
+          <li>Le groupe Pilote complet (réunion de lancement, visios mensuelles, Atelier Devis, sessions de formation)</li>
+          <li>WhatsApp privé entre membres du groupe Pilote</li>
+          <li>Garantie : on continue gratuitement si on n'a pas atteint 80% de l'objectif à 12 mois</li>
           <li>+ 4 garanties renforcées spécifiques Pilote (voir plus bas)</li>
         </ul>
 
@@ -190,39 +191,39 @@
 <!-- LES 4 GARANTIES RENFORCÉES -->
 <section class="pilote-section">
   <div class="container">
-    <div class="pilote-eyebrow">RISK REVERSAL</div>
+    <div class="pilote-eyebrow">VOS PROTECTIONS</div>
     <h2>4 garanties renforcées,<br/><em>uniquement sur l'offre Pilote.</em></h2>
-    <p class="lead">Le tarif fondateur s'accompagne de protections renforcées. Vous prenez quasiment zéro risque financier. C'est précisément l'idée.</p>
+    <p class="lead">Le tarif fondateur s'accompagne de protections renforcées. Vous ne risquez quasiment rien financièrement. C'est précisément l'idée.</p>
 
     <div class="guarantee-grid">
 
       <article class="guarantee-card">
         <div class="guarantee-num">GARANTIE 01</div>
-        <h4>Mois 1 remboursable à 100%</h4>
-        <p>Si à 30 jours vous n'êtes pas convaincu par la méthode, le ton ou la livraison initiale, on vous rembourse intégralement le setup (1 500 € HT). Pas de question, pas de justification, pas de litige.</p>
+        <h4>1er mois remboursé à 100%</h4>
+        <p>Si à 30 jours vous n'êtes pas convaincu par la méthode, le ton ou ce qu'on a livré au démarrage, on vous rembourse les 1 500 € HT intégralement. Pas de question, pas de justification, pas de litige.</p>
       </article>
 
       <article class="guarantee-card">
         <div class="guarantee-num">GARANTIE 02</div>
-        <h4>Setup en 2 fois (50 / 50)</h4>
-        <p>Vous payez 750 € HT à la signature, et les 750 € restants uniquement à la validation conjointe du déploiement (site + GBP + système d'avis en place). Pas de paiement intégral à l'aveugle.</p>
+        <h4>Paiement en 2 fois (50 / 50)</h4>
+        <p>Vous payez 750 € HT à la signature, et les 750 € restants seulement quand on valide ensemble la mise en ligne (site + fiche Google + système d'avis en place). Pas de paiement intégral à l'aveugle.</p>
       </article>
 
       <article class="guarantee-card">
         <div class="guarantee-num">GARANTIE 03</div>
-        <h4>Cap de coût à vie</h4>
-        <p>Si vous renouvelez avec nous au-delà des 12 mois Pilote, aucun frais de setup ne vous sera ré-engagé. Vous conservez le tarif Pilote sur les retainers futurs (250 €/mois) tant que la relation continue.</p>
+        <h4>Tarif Pilote gardé à vie</h4>
+        <p>Si vous renouvelez avec nous au-delà des 12 mois Pilote, aucun frais de mise en route ne vous sera refacturé. Vous gardez le tarif Pilote (250 €/mois) tant que la relation continue.</p>
       </article>
 
       <article class="guarantee-card">
         <div class="guarantee-num">GARANTIE 04</div>
-        <h4>Continuité gratuite KPI &lt; 80%</h4>
-        <p>Si à 12 mois votre KPI principal (défini ensemble au brief) n'atteint pas 80% de la cible, on continue gratuitement jusqu'à conformité (max 6 mois supplémentaires). Garantie déjà active sur l'offre standard - maintenue sur Pilote.</p>
+        <h4>On reste tant que l'objectif n'est pas là</h4>
+        <p>Si à 12 mois on n'a pas atteint au moins 80% de l'objectif fixé ensemble au brief, on continue à bosser pour vous gratuitement jusqu'à y arriver (6 mois supplémentaires maximum). Garantie déjà active sur l'offre normale, maintenue sur Pilote.</p>
       </article>
 
     </div>
 
-    <p style="margin-top:40px;color:#d6d3cb;font-size:14.5px;line-height:1.55;max-width:60ch">Note : l'engagement Pilote reste sur 12 mois fermes (vs sortie à M3 possible sur l'offre standard). C'est ce qui justifie le tarif fondateur. Vous gardez la totale liberté de partir au mois 1 (remboursé à 100%), pas entre M2 et M12.</p>
+    <p style="margin-top:40px;color:#d6d3cb;font-size:14.5px;line-height:1.55;max-width:60ch">À savoir : l'engagement Pilote reste ferme sur 12 mois (sur l'offre normale, on peut sortir au 3e mois). C'est ce qui justifie le tarif fondateur. Vous gardez la liberté totale de partir au 1er mois (remboursé à 100%), mais pas entre le 2e et le 12e mois.</p>
   </div>
 </section>
 
@@ -233,11 +234,11 @@
     <h2>5 cas réels qu'on documente <em>sérieusement,</em><br/>pas 50 témoignages bidons.</h2>
 
     <ol class="why-list">
-      <li>Capacité opérationnelle réelle : on livre 3 clients en parallèle max (cf. playbook). 5 Pilotes étalés sur le trimestre = soutenable.</li>
-      <li>Production des cas d'étude : chaque Pilote demandera ~6h de travail supplémentaire (interview, photos, vidéo, page dédiée). Au-delà de 5, on ne peut plus le faire avec la qualité voulue.</li>
-      <li>Crédibilité différenciante : 5 vrais cas chiffrés valent mieux que 50 témoignages anonymes ou inventés. Sur ce marché, l'authenticité bat le volume.</li>
-      <li>Sacrifice financier accepté : 5 Pilotes à -67% = 46 500 € de revenus différés sur 12 mois. Au-delà, ça met en péril la viabilité de l'agence.</li>
-      <li>Une seule vague : cette offre n'est pas reconductible. Une fois les 5 places signées, le tarif standard s'applique à tous les suivants. Pas de FOMO marketing, c'est juste la réalité.</li>
+      <li>On a une vraie capacité de travail : on prend 3 clients en parallèle maximum. 5 Pilotes étalés sur le trimestre, ça tient.</li>
+      <li>Documenter un cas, ça prend du temps : chaque Pilote demande environ 6h de travail en plus (interview, photos, vidéo, page dédiée). Au-delà de 5, on ne peut plus faire ça bien.</li>
+      <li>5 vrais cas chiffrés valent mieux que 50 témoignages anonymes ou bidons. Sur ce marché, l'authenticité bat le volume.</li>
+      <li>On accepte un sacrifice financier : 5 Pilotes à -67%, ça représente 46 500 € de revenus en moins sur 12 mois. Au-delà, l'agence ne tient plus.</li>
+      <li>Une seule vague : cette offre ne reviendra pas. Une fois les 5 places signées, le tarif normal s'applique à tous les suivants. Aucune pression artificielle, c'est juste la réalité.</li>
     </ol>
   </div>
 </section>
@@ -258,16 +259,16 @@
           <li>Votre fiche Google a moins de 30 avis et n'est pas optimisée</li>
           <li>Vous voulez devenir l'un des premiers cas à montrer dans votre métier</li>
           <li>Vous acceptez l'engagement 12 mois ferme et la communication publique</li>
-          <li>Vous êtes prêt à donner 4-6h sur les 90 premiers jours pour le kick-off et le contenu</li>
+          <li>Vous êtes prêt à donner 4-6h sur les 90 premiers jours pour le lancement et le contenu</li>
         </ul>
       </article>
 
       <article class="deal-card">
         <div class="deal-card-eyebrow" style="color:#c43c2a">VOUS N'ÊTES PAS LE BON PROFIL SI</div>
         <ul class="deal-list" style="margin-top:16px">
-          <li>Vous voulez tester rapidement et résilier dans 2 mois si pas de résultats - prenez l'offre standard avec sortie à M3</li>
-          <li>Vous refusez la communication publique de vos chiffres et de votre nom - prenez l'offre standard</li>
-          <li>Vous cherchez du SEA / Google Ads ou de la prospection externalisée - ce n'est pas dans notre périmètre</li>
+          <li>Vous voulez tester rapidement et résilier dans 2 mois si pas de résultats - prenez l'offre normale avec sortie possible au 3e mois</li>
+          <li>Vous refusez de rendre publics vos chiffres et le nom de votre entreprise - prenez l'offre normale</li>
+          <li>Vous cherchez de la pub Google ou de la prospection téléphonique - ce n'est pas ce qu'on fait</li>
           <li>Vous voulez un site sans la méthode autour - prenez Carnet Plein® Focus (3 500 € + 800 €/mois) ou un freelance</li>
           <li>Vous êtes hors zone IDF / HDF / Grand Est - on ne couvre que ces 3 régions pour l'instant</li>
         </ul>
@@ -282,11 +283,11 @@
   <div class="container">
     <div class="pilote-eyebrow" style="margin-bottom:16px">PROCHAINE ÉTAPE</div>
     <h2>20 minutes pour savoir<br/>si on est faits pour bosser <em>ensemble.</em></h2>
-    <p>Réservez votre audit gratuit. Si vous matchez le profil et que vous voulez l'une des 3 places restantes, on signe dans les 48h.</p>
+    <p>Réservez votre audit gratuit. Si vous correspondez au profil et que vous voulez l'une des 3 places restantes, on signe dans les 48h.</p>
     <a class="btn-primary" href="https://calendly.com/directedbymaick/audit-carnet-plein" target="_blank" rel="noopener">
       Réserver mon audit Vague Pilote <span aria-hidden="true">↗</span>
     </a>
-    <p style="margin-top:20px;font-size:13px;color:#a9a69f">Gratuit · 20 minutes · Sans pitch commercial · Si ce n'est pas pour vous, on vous le dit honnêtement.</p>
+    <p style="margin-top:20px;font-size:13px;color:#a9a69f">Gratuit · 20 minutes · Sans laïus commercial · Si ce n'est pas pour vous, on vous le dit honnêtement.</p>
   </div>
 </section>
 
