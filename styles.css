@@ -200,14 +200,11 @@ body.has-banner .nav{top:40px}
   body.has-banner .nav{top:36px}
 }
 
-/* Hide on scroll down : translateY négatif de toute la zone (bandeau + nav) */
-body.nav-hidden .pilote-banner,
+/* Hide on scroll down : SEULEMENT la nav. Le bandeau reste visible en haut. */
+/* translateY(calc(-100% - 60px)) = nav remonte de sa hauteur + 60px de buffer
+   pour être complètement masquée derrière le bandeau / hors viewport. */
 body.nav-hidden .nav{
-  transform:translateY(-150%);
-}
-body.nav-hidden .nav{
-  /* override la transform centrale, on translate seulement vertical */
-  transform:translateX(-50%) translateY(-150%);
+  transform:translateX(-50%) translateY(calc(-100% - 60px));
 }
 
 /* ========== NAV ========== */
@@ -223,7 +220,7 @@ body.nav-hidden .nav{
   border-top:none;
   border-radius:0 0 20px 20px;
   z-index:100;
-  transition:background .3s ease, border-color .3s ease;
+  transition:background .3s ease, border-color .3s ease, transform .35s cubic-bezier(.32,.72,0,1);
 }
 .nav.is-scrolled{
   background:rgba(243,242,238,0.94);
