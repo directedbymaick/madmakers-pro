@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Core SEO -->
-<title>Vague Pilote 2026 - 5 places à tarif fondateur · Carnet Plein®</title>
+<title>Les 5 premiers - Tarif fondateur · Carnet Plein®</title>
 <meta name="description" content="5 places à tarif fondateur (1 500 € + 250 €/mois, -67%) pour les premiers artisans qui acceptent de devenir nos cas réels. Engagement 12 mois fermes, garanties renforcées." />
 <meta name="robots" content="index,follow" />
 <meta name="theme-color" content="#0a0a0a" />
@@ -19,7 +19,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Carnet Plein® by Mad Makers" />
-<meta property="og:title" content="Vague Pilote 2026 - 5 places à tarif fondateur" />
+<meta property="og:title" content="Les 5 premiers - 5 places à tarif fondateur · Carnet Plein®" />
 <meta property="og:description" content="5 artisans pionniers à -67% en échange de devenir nos cas réels. Engagement 12 mois fermes. 4 garanties renforcées." />
 <meta property="og:url" content="https://carnetplein.mad-makers.fr/vague-pilote.html" />
 <meta property="og:image" content="https://carnetplein.mad-makers.fr/assets/og-pro.jpg" />
@@ -39,9 +39,28 @@
   .pilote-h1{font-size:clamp(40px,7vw,84px);font-weight:600;line-height:0.95;letter-spacing:-0.025em;color:#fff;margin:0 0 32px;max-width:18ch}
   .pilote-h1 em{color:var(--accent);font-style:italic;font-family:var(--f-accent,'Geist',serif)}
   .pilote-sub{font-size:clamp(16px,1.5vw,20px);line-height:1.5;color:#d6d3cb;max-width:62ch;margin-bottom:40px}
-  .pilote-counter{display:inline-flex;align-items:baseline;gap:12px;padding:16px 28px;background:rgba(224,84,27,0.12);border:1px solid rgba(224,84,27,0.40);border-radius:999px;margin-bottom:40px;font-family:var(--f-mono);font-size:13px;letter-spacing:0.04em;color:#fff;text-transform:uppercase}
-  .pilote-counter strong{font-size:28px;color:var(--accent);font-weight:700;letter-spacing:-0.02em}
-  .pilote-counter .lbl{color:#a9a69f;font-size:11px}
+  .pilote-counter{display:inline-flex;flex-direction:column;gap:18px;padding:22px 26px;background:linear-gradient(135deg,rgba(224,84,27,0.10),rgba(224,84,27,0.03));border:1px solid rgba(224,84,27,0.35);border-radius:18px;margin-bottom:40px;max-width:540px;width:100%;box-sizing:border-box}
+  .counter-header{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .counter-num{display:inline-flex;align-items:baseline;gap:4px;font-family:var(--f-mono)}
+  .counter-num-val{font-size:48px;font-weight:700;color:var(--accent);letter-spacing:-0.03em;line-height:1}
+  .counter-num-total{font-size:22px;color:#a9a69f;font-weight:500}
+  .counter-meta{display:flex;flex-direction:column;gap:4px}
+  .counter-label{font-family:var(--f-mono);font-size:12.5px;color:#fff;letter-spacing:0.10em;text-transform:uppercase;font-weight:600}
+  .counter-sublabel{font-family:var(--f-mono);font-size:10.5px;color:#a9a69f;letter-spacing:0.06em;display:inline-flex;align-items:center;gap:7px}
+  .counter-sublabel::before{content:"";width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s ease-in-out infinite;display:inline-block}
+  .counter-slots{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+  .slot{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 4px;border-radius:8px;font-family:var(--f-mono);text-align:center;transition:transform .2s}
+  .slot-num{font-size:14px;font-weight:700;letter-spacing:-0.02em;line-height:1;margin-bottom:5px}
+  .slot-state{font-size:9px;font-weight:600;letter-spacing:0.10em;text-transform:uppercase}
+  .slot.taken{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10)}
+  .slot.taken .slot-num{color:rgba(255,255,255,0.30);text-decoration:line-through;text-decoration-thickness:1.5px}
+  .slot.taken .slot-state{color:rgba(255,255,255,0.30)}
+  .slot.free{background:rgba(224,84,27,0.12);border:1px solid rgba(224,84,27,0.40)}
+  .slot.free .slot-num{color:#fff}
+  .slot.free .slot-state{color:var(--accent)}
+  .slot.free:last-child{animation:slotPulse 2.5s ease-in-out infinite}
+  @keyframes slotPulse{0%,100%{box-shadow:0 0 0 0 rgba(224,84,27,0.45)}50%{box-shadow:0 0 0 9px rgba(224,84,27,0)}}
+  @media (max-width:520px){.slot-num{font-size:12px}.slot-state{font-size:8px}.slot{padding:10px 2px}.counter-num-val{font-size:38px}}
 
   .pilote-section{padding:80px 0;border-top:1px solid rgba(255,255,255,0.08)}
   .pilote-section h2{font-size:clamp(28px,4vw,48px);font-weight:600;letter-spacing:-0.02em;line-height:1.05;color:#fff;margin:0 0 24px;max-width:24ch}
@@ -116,15 +135,45 @@
   <div class="container">
     <a href="/" class="backlink">← Retour à carnetplein.mad-makers.fr</a>
 
-    <div class="pilote-eyebrow">VAGUE PILOTE 2026 · OFFRE LIMITÉE</div>
+    <div class="pilote-eyebrow">LES 5 PREMIERS · OFFRE FONDATEUR</div>
 
     <h1 class="pilote-h1">5 places.<br/><em>Tarif fondateur.</em><br/>Pour de vrais cas.</h1>
 
     <p class="pilote-sub">On démarre Carnet Plein® avec 5 artisans pionniers à <strong>-67% du tarif normal</strong> (1 500 € + 250 €/mois au lieu de 5 000 € + 800 €/mois). En échange, vous acceptez d'être l'un de nos premiers cas réels documentés. Chiffres, photos avant/après, témoignage à 3, 6 et 12 mois. C'est tout.</p>
 
-    <div class="pilote-counter">
-      <strong>3</strong>
-      <span class="lbl">places restantes sur 5</span>
+    <div class="pilote-counter" role="status" aria-label="4 places restantes sur 5">
+      <div class="counter-header">
+        <div class="counter-num">
+          <span class="counter-num-val">4</span>
+          <span class="counter-num-total">/ 5</span>
+        </div>
+        <div class="counter-meta">
+          <span class="counter-label">Places restantes</span>
+          <span class="counter-sublabel">Mise à jour temps réel</span>
+        </div>
+      </div>
+      <div class="counter-slots" aria-hidden="true">
+        <div class="slot taken">
+          <span class="slot-num">01</span>
+          <span class="slot-state">Pris</span>
+        </div>
+        <div class="slot free">
+          <span class="slot-num">02</span>
+          <span class="slot-state">Libre</span>
+        </div>
+        <div class="slot free">
+          <span class="slot-num">03</span>
+          <span class="slot-state">Libre</span>
+        </div>
+        <div class="slot free">
+          <span class="slot-num">04</span>
+          <span class="slot-state">Libre</span>
+        </div>
+        <div class="slot free">
+          <span class="slot-num">05</span>
+          <span class="slot-state">Libre</span>
+        </div>
+      </div>
     </div>
 
     <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
@@ -147,7 +196,7 @@
 
       <article class="deal-card pilote-card">
         <div class="deal-card-eyebrow">Ce que vous obtenez</div>
-        <h3>Carnet Plein® Vague Pilote</h3>
+        <h3>Carnet Plein® · Les 5 premiers</h3>
         <div class="deal-card-strike">13 800 € HT sur 12 mois (tarif normal)</div>
         <div class="deal-card-price">1 500 € <small>HT à la signature</small></div>
         <div class="deal-card-month"><strong>+ 250 €</strong> HT/mois sur 12 mois</div>
@@ -155,10 +204,10 @@
         <ul class="deal-list">
           <li>Les 6 composants Carnet Plein® Intégral (site + SEO local + fiche Google + avis automatisés + tableau de bord + photos + accompagnement)</li>
           <li>Les 4 bonus à télécharger en PDF</li>
-          <li>Le groupe Pilote complet (réunion de lancement, visios mensuelles, Atelier Devis, sessions de formation)</li>
-          <li>WhatsApp privé entre membres du groupe Pilote</li>
+          <li>Le groupe complet des 5 premiers (réunion de lancement, visios mensuelles, Atelier Devis, sessions de formation)</li>
+          <li>WhatsApp privé entre les 5 premiers</li>
           <li>Garantie : on continue gratuitement si on n'a pas atteint 80% de l'objectif à 12 mois</li>
-          <li>+ 4 garanties renforcées spécifiques Pilote (voir plus bas)</li>
+          <li>+ 4 garanties renforcées réservées aux 5 premiers (voir plus bas)</li>
         </ul>
 
         <div class="deal-card-total">Total 12 mois : 4 500 € HT · <span class="saving">économie 9 300 € HT (-67%)</span></div>
@@ -192,7 +241,7 @@
 <section class="pilote-section">
   <div class="container">
     <div class="pilote-eyebrow">VOS PROTECTIONS</div>
-    <h2>4 garanties renforcées,<br/><em>uniquement sur l'offre Pilote.</em></h2>
+    <h2>4 garanties renforcées,<br/><em>réservées aux 5 premiers.</em></h2>
     <p class="lead">Le tarif fondateur s'accompagne de protections renforcées. Vous ne risquez quasiment rien financièrement. C'est précisément l'idée.</p>
 
     <div class="guarantee-grid">
@@ -211,19 +260,19 @@
 
       <article class="guarantee-card">
         <div class="guarantee-num">GARANTIE 03</div>
-        <h4>Tarif Pilote gardé à vie</h4>
-        <p>Si vous renouvelez avec nous au-delà des 12 mois Pilote, aucun frais de mise en route ne vous sera refacturé. Vous gardez le tarif Pilote (250 €/mois) tant que la relation continue.</p>
+        <h4>Tarif fondateur gardé à vie</h4>
+        <p>Si vous renouvelez avec nous au-delà des 12 mois, aucun frais de mise en route ne vous sera refacturé. Vous gardez le tarif fondateur (250 €/mois) tant que la relation continue.</p>
       </article>
 
       <article class="guarantee-card">
         <div class="guarantee-num">GARANTIE 04</div>
         <h4>On reste tant que l'objectif n'est pas là</h4>
-        <p>Si à 12 mois on n'a pas atteint au moins 80% de l'objectif fixé ensemble au brief, on continue à bosser pour vous gratuitement jusqu'à y arriver (6 mois supplémentaires maximum). Garantie déjà active sur l'offre normale, maintenue sur Pilote.</p>
+        <p>Si à 12 mois on n'a pas atteint au moins 80% de l'objectif fixé ensemble au brief, on continue à bosser pour vous gratuitement jusqu'à y arriver (6 mois supplémentaires maximum). Garantie déjà active sur l'offre normale, maintenue pour les 5 premiers.</p>
       </article>
 
     </div>
 
-    <p style="margin-top:40px;color:#d6d3cb;font-size:14.5px;line-height:1.55;max-width:60ch">À savoir : l'engagement Pilote reste ferme sur 12 mois (sur l'offre normale, on peut sortir au 3e mois). C'est ce qui justifie le tarif fondateur. Vous gardez la liberté totale de partir au 1er mois (remboursé à 100%), mais pas entre le 2e et le 12e mois.</p>
+    <p style="margin-top:40px;color:#d6d3cb;font-size:14.5px;line-height:1.55;max-width:60ch">À savoir : l'engagement fondateur reste ferme sur 12 mois (sur l'offre normale, on peut sortir au 3e mois). C'est ce qui justifie le tarif fondateur. Vous gardez la liberté totale de partir au 1er mois (remboursé à 100%), mais pas entre le 2e et le 12e mois.</p>
   </div>
 </section>
 
@@ -234,10 +283,10 @@
     <h2>5 cas réels qu'on documente <em>sérieusement,</em><br/>pas 50 témoignages bidons.</h2>
 
     <ol class="why-list">
-      <li>On a une vraie capacité de travail : on prend 3 clients en parallèle maximum. 5 Pilotes étalés sur le trimestre, ça tient.</li>
-      <li>Documenter un cas, ça prend du temps : chaque Pilote demande environ 6h de travail en plus (interview, photos, vidéo, page dédiée). Au-delà de 5, on ne peut plus faire ça bien.</li>
+      <li>On a une vraie capacité de travail : on prend 3 clients en parallèle maximum. 5 premiers signés étalés sur le trimestre, ça tient.</li>
+      <li>Documenter un cas, ça prend du temps : chaque cas demande environ 6h de travail en plus (interview, photos, vidéo, page dédiée). Au-delà de 5, on ne peut plus faire ça bien.</li>
       <li>5 vrais cas chiffrés valent mieux que 50 témoignages anonymes ou bidons. Sur ce marché, l'authenticité bat le volume.</li>
-      <li>On accepte un sacrifice financier : 5 Pilotes à -67%, ça représente 46 500 € de revenus en moins sur 12 mois. Au-delà, l'agence ne tient plus.</li>
+      <li>On accepte un sacrifice financier : 5 premiers à -67%, ça représente 46 500 € de revenus en moins sur 12 mois. Au-delà, l'agence ne tient plus.</li>
       <li>Une seule vague : cette offre ne reviendra pas. Une fois les 5 places signées, le tarif normal s'applique à tous les suivants. Aucune pression artificielle, c'est juste la réalité.</li>
     </ol>
   </div>
@@ -283,9 +332,9 @@
   <div class="container">
     <div class="pilote-eyebrow" style="margin-bottom:16px">PROCHAINE ÉTAPE</div>
     <h2>20 minutes pour savoir<br/>si on est faits pour bosser <em>ensemble.</em></h2>
-    <p>Réservez votre audit gratuit. Si vous correspondez au profil et que vous voulez l'une des 3 places restantes, on signe dans les 48h.</p>
+    <p>Réservez votre audit gratuit. Si vous correspondez au profil et que vous voulez l'une des 4 places restantes, on signe dans les 48h.</p>
     <a class="btn-primary" href="https://calendly.com/directedbymaick/audit-carnet-plein" target="_blank" rel="noopener">
-      Réserver mon audit Vague Pilote <span aria-hidden="true">↗</span>
+      Réserver mon audit <span aria-hidden="true">↗</span>
     </a>
     <p style="margin-top:20px;font-size:13px;color:#a9a69f">Gratuit · 20 minutes · Sans laïus commercial · Si ce n'est pas pour vous, on vous le dit honnêtement.</p>
   </div>
