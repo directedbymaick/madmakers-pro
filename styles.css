@@ -440,23 +440,28 @@ body.nav-hidden .nav{
   border-color:var(--rule-dark);
 }
 .pain-card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,0.08)}
-.pain-card .quote{
-  font-family:var(--f-accent);font-size:22px;font-weight:500;
-  line-height:1.25;color:var(--encre);letter-spacing:-0.012em;
-  margin:0;position:relative;
+.pain-card .pain-title{
+  font-family:var(--f-display);font-size:20px;font-weight:600;
+  line-height:1.25;color:var(--encre);letter-spacing:-0.015em;
+  margin:0 0 14px;
 }
-.dark .pain-card .quote{color:#fff}
-.pain-card .quote::before{
-  content:'"';position:absolute;top:-18px;left:-4px;
-  font-size:64px;color:var(--accent);opacity:0.4;
-  font-family:var(--f-display);
+.dark .pain-card .pain-title{color:#fff}
+.pain-card .pain-body{
+  font-size:15px;line-height:1.6;color:var(--ink-dim);
+  margin:0;
 }
-.pain-card .who{
-  font-family:var(--f-mono);font-size:11px;text-transform:uppercase;
-  letter-spacing:0.12em;color:var(--ink-dim);
-  margin-top:20px;
+.dark .pain-card .pain-body{color:#d6d3cb}
+.pain-card .pain-source{
+  margin-top:20px;padding-top:14px;
+  border-top:1px solid var(--rule-light);
+  font-family:var(--f-mono);font-size:10.5px;
+  letter-spacing:0.04em;line-height:1.5;
+  color:var(--ink-dim);opacity:0.7;
 }
-.dark .pain-card .who{color:var(--paper-dim)}
+.dark .pain-card .pain-source{
+  border-top-color:rgba(255,255,255,0.08);
+  color:#8a8780;opacity:0.85;
+}
 
 /* ========== BUNDLE COMPONENTS ========== */
 .bundle-grid{
