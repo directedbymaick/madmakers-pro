@@ -948,6 +948,25 @@ body.nav-hidden .nav{
   border-radius:var(--r-lg);
   padding:32px;
   display:flex;flex-direction:column;gap:18px;
+  position:relative;
+}
+.preuve-linkedin{
+  position:absolute;bottom:20px;right:20px;
+  width:36px;height:36px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.04);color:var(--ink-dim);
+  text-decoration:none;
+  transition:background .2s,color .2s,transform .2s;
+}
+.preuve-linkedin:hover{
+  background:var(--accent);color:#fff;
+  transform:translateY(-1px);
+}
+.dark .preuve-linkedin{
+  background:rgba(255,255,255,0.06);color:#a9a69f;
+}
+.dark .preuve-linkedin:hover{
+  background:var(--accent);color:#fff;
 }
 .dark .preuve-card{
   background:rgba(255,255,255,0.04);
