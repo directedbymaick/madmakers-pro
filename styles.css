@@ -951,11 +951,11 @@ body.nav-hidden .nav{
   position:relative;
 }
 .preuve-linkedin{
-  position:absolute;bottom:20px;right:20px;
-  width:36px;height:36px;border-radius:50%;
+  margin-left:auto;
+  width:30px;height:30px;border-radius:50%;
   display:inline-flex;align-items:center;justify-content:center;
   background:rgba(0,0,0,0.04);color:var(--ink-dim);
-  text-decoration:none;
+  text-decoration:none;flex-shrink:0;
   transition:background .2s,color .2s,transform .2s;
 }
 .preuve-linkedin:hover{
@@ -996,7 +996,7 @@ body.nav-hidden .nav{
 .preuve-foot{
   font-family:var(--f-mono);font-size:11px;letter-spacing:0.08em;
   text-transform:uppercase;color:var(--ink-dim);
-  display:flex;flex-wrap:wrap;gap:14px;
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;
   padding-top:14px;border-top:1px solid var(--rule-light);
 }
 .dark .preuve-foot{color:var(--paper-dim);border-color:var(--rule-dark)}
