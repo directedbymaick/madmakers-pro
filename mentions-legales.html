@@ -7,142 +7,116 @@
 <title>Mentions légales - Carnet Plein® by Mad Makers</title>
 <meta name="description" content="Mentions légales du site Carnet Plein® by Mad Makers : éditeur Sara Cankaya (EI), SIRET 832 059 695 00029, hébergement Vercel, propriété intellectuelle et crédits." />
 <meta name="robots" content="index,follow" />
-<meta name="theme-color" content="#0c0d0a" />
+<meta name="theme-color" content="#0a0a0a" />
 <link rel="canonical" href="https://carnetplein.mad-makers.fr/mentions-legales.html" />
 
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
 <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
-<link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" />
 
 <link rel="stylesheet" href="styles.css" />
 
 <style>
-  /* Page-local styling - reuses the global tokens (--bg, --cream, --lime,
-     --serif, --sans, --mono) defined in styles.css for visual coherence
-     with the rest of Mad Makers Pro. */
   .legal-page{
-    background:var(--bg);
-    color:var(--fg);
+    background:var(--encre);color:var(--paper);
     min-height:100vh;
-    padding:160px 32px 80px;
-    position:relative;
-    overflow:hidden;
+    padding:120px 32px 80px;
+    position:relative;overflow:hidden;
   }
   .legal-page::before{
-    content:"";
-    position:absolute;inset:0;
-    background:
-      radial-gradient(ellipse 80% 40% at 50% 0%, rgba(200,255,61,0.08), transparent 60%),
-      radial-gradient(ellipse 60% 30% at 50% 100%, rgba(200,255,61,0.04), transparent 60%);
-    pointer-events:none;
-    z-index:0;
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse 80% 40% at 50% 0%, rgba(224,84,27,0.10), transparent 60%);
+    pointer-events:none;z-index:0;
   }
-  .legal-wrap{
-    max-width:880px;margin:0 auto;
-    position:relative;z-index:1;
-  }
-  .legal-head{
-    margin-bottom:80px;
-    padding-bottom:40px;
-    border-bottom:1px solid var(--line);
-  }
+  .legal-wrap{max-width:880px;margin:0 auto;position:relative;z-index:1}
+  .legal-head{margin-bottom:64px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.08)}
   .legal-head h1{
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(44px, 6.5vw, 86px);
-    line-height:1.02;letter-spacing:-0.02em;
-    color:var(--cream);
-    margin-top:24px;
-    text-wrap:balance;
+    font-family:var(--f-display);font-weight:600;
+    font-size:clamp(40px,6vw,72px);
+    line-height:1.05;letter-spacing:-0.025em;
+    color:#fff;margin:24px 0 0;
   }
-  .legal-head h1 em{
-    font-style:italic;
-    background:linear-gradient(95deg, var(--lime) 0%, var(--lime) 50%, rgba(241,236,224,0.4) 100%);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
+  .legal-head h1 em{font-style:italic;color:var(--accent)}
   .legal-meta{
-    margin-top:24px;
-    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;
-    text-transform:uppercase;color:var(--fg-mute);
+    margin-top:20px;
+    font-family:var(--f-mono);font-size:11px;letter-spacing:0.10em;
+    text-transform:uppercase;color:#a9a69f;
   }
+  .legal-page .eyebrow{color:var(--accent)}
+  .legal-page .eyebrow .sq{background:var(--accent)}
 
-  .legal-section{
-    margin-top:64px;
-    padding-top:32px;
-    border-top:1px solid var(--line);
-  }
+  .legal-section{margin-top:56px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.08)}
   .legal-section:first-of-type{border-top:none;padding-top:0;margin-top:0}
   .legal-section h2{
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(26px, 3vw, 38px);
-    line-height:1.1;letter-spacing:-0.01em;
-    color:var(--cream);
-    margin-bottom:24px;
+    font-family:var(--f-display);font-weight:600;
+    font-size:clamp(24px,2.8vw,34px);
+    line-height:1.15;letter-spacing:-0.02em;
+    color:#fff;margin-bottom:22px;
     display:flex;align-items:baseline;gap:18px;
   }
   .legal-section h2 .num{
-    font-family:var(--mono);font-weight:500;font-size:11px;
-    letter-spacing:0.22em;color:var(--lime);
-    flex-shrink:0;
+    font-family:var(--f-mono);font-weight:600;font-size:11px;
+    letter-spacing:0.18em;color:var(--accent);flex-shrink:0;
   }
   .legal-section p{
-    font-family:var(--sans);font-size:15px;line-height:1.7;
-    color:var(--fg-dim);
-    margin-bottom:14px;
-    max-width:68ch;
+    font-family:var(--f-body,'Geist',sans-serif);
+    font-size:15.5px;line-height:1.65;
+    color:#d6d3cb;margin-bottom:14px;max-width:68ch;
   }
-  .legal-section p strong{color:var(--cream);font-weight:500}
-  .legal-section ul{
-    list-style:none;padding:0;margin:14px 0;
-  }
+  .legal-section p strong{color:#fff;font-weight:500}
+  .legal-section ul{list-style:none;padding:0;margin:14px 0}
   .legal-section ul li{
-    font-family:var(--sans);font-size:15px;line-height:1.7;
-    color:var(--fg-dim);
-    padding-left:22px;position:relative;
-    margin-bottom:8px;
+    font-family:var(--f-body,'Geist',sans-serif);
+    font-size:15.5px;line-height:1.65;
+    color:#d6d3cb;padding-left:22px;position:relative;margin-bottom:8px;
   }
   .legal-section ul li::before{
     content:"→";position:absolute;left:0;top:0;
-    color:var(--lime);font-family:var(--mono);font-weight:500;
+    color:var(--accent);font-family:var(--f-mono);font-weight:600;
   }
-  .legal-section ul li strong{color:var(--cream);font-weight:500}
+  .legal-section ul li strong{color:#fff;font-weight:500}
   .legal-section a.link{
-    color:var(--lime);
-    border-bottom:1px solid rgba(200,255,61,0.4);
-    transition:color .2s ease, border-color .2s ease;
+    color:var(--accent);border-bottom:1px solid rgba(224,84,27,0.4);
+    transition:color .2s ease, border-color .2s ease;text-decoration:none;
   }
-  .legal-section a.link:hover{color:var(--cream);border-color:var(--cream)}
+  .legal-section a.link:hover{color:#fff;border-color:#fff}
 
-  /* Key-value rows for editor / hosting cards */
   .legal-card{
     margin-top:18px;
-    border:1px solid var(--line-2);
+    border:1px solid rgba(255,255,255,0.12);
     border-radius:14px;
-    background:rgba(20,21,17,0.4);
-    backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px);
+    background:rgba(255,255,255,0.04);
     overflow:hidden;
   }
   .kv-row{
     display:grid;grid-template-columns:200px 1fr;gap:24px;
     padding:16px 22px;
-    border-bottom:1px solid var(--line);
+    border-bottom:1px solid rgba(255,255,255,0.08);
   }
   .kv-row:last-child{border-bottom:none}
   .kv-row .k{
-    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;
-    text-transform:uppercase;color:var(--fg-mute);
-    align-self:center;
+    font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;
+    text-transform:uppercase;color:#a9a69f;align-self:center;
   }
   .kv-row .v{
-    font-family:var(--sans);font-size:14px;line-height:1.5;
-    color:var(--cream);font-weight:400;
+    font-family:var(--f-body,'Geist',sans-serif);font-size:14px;line-height:1.5;
+    color:#fff;font-weight:400;
   }
-  .kv-row .v .muted{color:var(--fg-mute)}
+  .kv-row .v .muted{color:#a9a69f}
+
+  .legal-foot{
+    padding:48px 32px;text-align:center;color:#a9a69f;font-size:13px;
+    border-top:1px solid rgba(255,255,255,0.08);
+    background:var(--encre);
+  }
+  .legal-foot a{color:var(--accent);text-decoration:none}
+  .legal-foot a:hover{text-decoration:underline}
 
   @media (max-width:680px){
-    .legal-page{padding:140px 22px 60px}
+    .legal-page{padding:100px 22px 60px}
     .kv-row{grid-template-columns:1fr;gap:4px;padding:14px 18px}
     .legal-section h2{flex-direction:column;gap:8px}
   }
@@ -150,16 +124,13 @@
 </head>
 <body>
 
-<!-- ================ NAV (Pro pill) ================ -->
+<!-- ================ NAV ================ -->
 <nav class="nav" id="nav">
-  <a href="/" class="brand"><span class="mk"></span><span class="brand-name">Mad Makers</span></a>
-  <div class="nav-links">
-    <a href="/#manifeste">Agence</a>
-    <a href="/#services">Services</a>
-    <a href="/#projets">Projets</a>
-    <a href="/#equipe">Fondateurs</a>
-  </div>
-  <a class="nav-cta" href="/">Retour à l'accueil <span class="arrow">↗</span></a>
+  <a href="/" class="brand" aria-label="Retour à l'accueil">
+    <span class="mk" aria-hidden="true"></span>
+    <span class="brand-name">Carnet Plein<sup style="font-size:0.55em">®</sup> <b>by Mad Makers</b></span>
+  </a>
+  <a class="nav-cta" href="https://calendly.com/directedbymaick/audit-carnet-plein" target="_blank" rel="noopener">Audit gratuit <span aria-hidden="true">↗</span></a>
 </nav>
 
 <main class="legal-page">
@@ -202,7 +173,7 @@
       <h2><span class="num">03</span>Propriété intellectuelle</h2>
       <p>L'ensemble du contenu de ce site (textes, images, vidéos, sons, code source, charte graphique, logo) est la propriété exclusive de Mad Makers ou de ses partenaires, et est protégé par le droit d'auteur français et international (Code de la propriété intellectuelle, articles L.111-1 et suivants).</p>
       <p>Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle, du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit, est <strong>interdite sans autorisation écrite préalable</strong>.</p>
-      <p>Les marques et logos cités ou affichés sur le site (notamment Riot Games, League of Legends, etc.) sont la propriété de leurs détenteurs respectifs. Leur mention est faite à des fins exclusivement éditoriales et illustratives.</p>
+      <p>Les marques et logos tiers éventuellement cités ou affichés sur le site (Google, Vercel, Bunny, etc.) sont la propriété de leurs détenteurs respectifs. Leur mention est faite à des fins exclusivement éditoriales et illustratives.</p>
     </section>
 
     <section class="legal-section">
@@ -210,7 +181,7 @@
       <ul>
         <li><strong>Conception, design, développement :</strong> Mad Makers</li>
         <li><strong>Photographies / vidéos :</strong> Mad Makers, sauf indication contraire</li>
-        <li><strong>Typographies :</strong> Instrument Serif, Inter, JetBrains Mono - servies via <a class="link" href="https://fonts.bunny.net" target="_blank" rel="noopener">Bunny Fonts</a> (RGPD-compliant)</li>
+        <li><strong>Typographies :</strong> Geist et Geist Mono - servies via <a class="link" href="https://fonts.bunny.net" target="_blank" rel="noopener">Bunny Fonts</a> (hébergement européen conforme RGPD)</li>
       </ul>
     </section>
 
@@ -233,68 +204,10 @@
   </div>
 </main>
 
-<!-- ================ FOOTER (Pro) ================ -->
-<footer class="foot">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <div class="mk"></div>
-      <div class="addr">Mad Makers<br/>Agence web créative<br/>Paris - France</div>
-      <div class="tag">- Dream it. We make it.</div>
-    </div>
-    <div class="foot-col">
-      <h6>Services</h6>
-      <ul>
-        <li><a href="/#services">Site one-page</a></li>
-        <li><a href="/#services">Site vitrine</a></li>
-        <li><a href="/#services">Site sur-mesure</a></li>
-        <li><a href="/#services">Vidéo institutionnelle</a></li>
-        <li><a href="/#services">SEO &amp; contenus</a></li>
-      </ul>
-    </div>
-    <div class="foot-col">
-      <h6>Agence</h6>
-      <ul>
-        <li><a href="/#manifeste">Notre position</a></li>
-        <li><a href="/#projets">Projets</a></li>
-        <li><a href="/#equipe">Fondateurs</a></li>
-        <li><a href="/#refus">Engagements</a></li>
-      </ul>
-    </div>
-    <div class="foot-col contact">
-      <h6>Contact</h6>
-      <ul>
-        <li>
-          <span class="lbl">Email</span>
-          <a href="mailto:contact@mad-makers.fr">contact@mad-makers.fr</a>
-        </li>
-        <li>
-          <span class="lbl">Téléphone</span>
-          <a href="tel:+33189724498">01 89 72 44 98</a>
-        </li>
-        <li>
-          <span class="lbl">Rendez-vous</span>
-          <a href="https://calendly.com/directedbymaick/audit-carnet-plein" target="_blank" rel="noopener">Réserver un créneau ↗</a>
-        </li>
-      </ul>
-    </div>
-    <div class="foot-col">
-      <h6>Légal</h6>
-      <ul>
-        <li><a href="mentions-legales.html">Mentions légales</a></li>
-        <li><a href="politique-confidentialite.html">Politique</a></li>
-        <li><a href="https://share.google/PSeyhdo7m6e7L82Om" target="_blank" rel="noopener">Google Business ↗</a></li>
-        <li><a href="https://www.mad-makers.fr" target="_blank" rel="noopener">Site principal ↗</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <div>© 2026 - MAD MAKERS · Agence web créative · Paris</div>
-    <div class="social">
-      <a href="https://www.linkedin.com/company/113270995" target="_blank" rel="noopener" aria-label="LinkedIn Mad Makers" title="LinkedIn">In</a>
-      <a href="mailto:contact@mad-makers.fr" aria-label="Envoyer un email" title="Email">@</a>
-      <a href="https://www.mad-makers.fr" target="_blank" rel="noopener" aria-label="Site principal Mad Makers" title="Site principal">↗</a>
-    </div>
-  </div>
+<!-- ================ FOOTER ================ -->
+<footer class="legal-foot">
+  <p>Carnet Plein® by Mad Makers · Romainville (93) · <a href="/">Retour au site</a> · <a href="/vague-pilote">Les 5 premiers</a> · <a href="/methodologie-mad-makers">Notre propre cas</a> · <a href="/politique-confidentialite">Politique de confidentialité</a></p>
+  <p style="margin-top:14px;font-size:11px;color:#6f6c66;letter-spacing:0.06em">© 2026 Mad Makers · Tous droits réservés</p>
 </footer>
 
 </body>
