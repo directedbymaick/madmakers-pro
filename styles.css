@@ -426,41 +426,114 @@ body.nav-hidden .nav{
 .fit-no li::before{background:var(--red-soft)}
 
 /* ========== PAIN CARDS ========== */
-.pain-grid{
-  display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-  gap:18px;margin-top:48px;
+/* ========== PAIN TABS (interactive) ========== */
+.pain-tabs{
+  display:grid;grid-template-columns:280px 1fr;gap:48px;margin-top:56px;
+  align-items:start;
 }
-.pain-card{
-  background:#fff;border:1px solid var(--rule-light);
-  border-radius:var(--r-md);padding:28px;
-  position:relative;transition:transform .3s, box-shadow .3s;
+.pain-tablist{
+  display:flex;flex-direction:column;gap:6px;
+  border-left:1px solid var(--rule-light);padding-left:0;
+  position:sticky;top:120px;
 }
-.dark .pain-card{
-  background:rgba(255,255,255,0.04);
-  border-color:var(--rule-dark);
+.dark .pain-tablist{border-left-color:rgba(255,255,255,0.10)}
+
+.pain-tab{
+  appearance:none;background:transparent;border:0;
+  display:flex;align-items:baseline;gap:14px;
+  padding:14px 18px;cursor:pointer;
+  font-family:var(--f-body);text-align:left;
+  border-left:2px solid transparent;margin-left:-1px;
+  transition:border-color .2s,background .2s,color .2s;
+  color:var(--ink-dim);
 }
-.pain-card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,0.08)}
-.pain-card .pain-title{
-  font-family:var(--f-display);font-size:20px;font-weight:600;
-  line-height:1.25;color:var(--encre);letter-spacing:-0.015em;
-  margin:0 0 14px;
+.dark .pain-tab{color:#8a8780}
+.pain-tab:hover{color:var(--encre);background:rgba(0,0,0,0.02)}
+.dark .pain-tab:hover{color:#fff;background:rgba(255,255,255,0.03)}
+.pain-tab.is-active{
+  border-left-color:var(--accent);
+  color:var(--encre);background:rgba(224,84,27,0.04);
 }
-.dark .pain-card .pain-title{color:#fff}
-.pain-card .pain-body{
-  font-size:15px;line-height:1.6;color:var(--ink-dim);
-  margin:0;
+.dark .pain-tab.is-active{color:#fff;background:rgba(224,84,27,0.08)}
+
+.pain-tab-num{
+  font-family:var(--f-mono);font-size:11px;font-weight:600;
+  letter-spacing:0.10em;color:var(--ink-dim);
+  flex-shrink:0;line-height:1.4;
 }
-.dark .pain-card .pain-body{color:#d6d3cb}
-.pain-card .pain-source{
-  margin-top:20px;padding-top:14px;
-  border-top:1px solid var(--rule-light);
-  font-family:var(--f-mono);font-size:10.5px;
-  letter-spacing:0.04em;line-height:1.5;
-  color:var(--ink-dim);opacity:0.7;
+.pain-tab.is-active .pain-tab-num{color:var(--accent)}
+.dark .pain-tab .pain-tab-num{color:#6f6c66}
+
+.pain-tab-label{
+  font-size:15.5px;font-weight:500;letter-spacing:-0.01em;line-height:1.3;
 }
-.dark .pain-card .pain-source{
-  border-top-color:rgba(255,255,255,0.08);
-  color:#8a8780;opacity:0.85;
+
+.pain-panels{position:relative;min-height:280px}
+.pain-panel{
+  animation:painFade .35s ease-out;
+  max-width:60ch;
+}
+.pain-panel[hidden]{display:none}
+@keyframes painFade{
+  from{opacity:0;transform:translateY(6px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.pain-panel-meta{
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.10em;
+  color:var(--accent);text-transform:uppercase;font-weight:600;
+  margin-bottom:18px;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.pain-panel-meta::before{
+  content:"";width:6px;height:6px;background:var(--accent);
+  border-radius:50%;display:inline-block;
+}
+
+.pain-panel-title{
+  font-family:var(--f-display);font-size:clamp(28px,3.6vw,42px);
+  font-weight:600;line-height:1.1;letter-spacing:-0.025em;
+  color:var(--encre);margin:0 0 22px;
+}
+.dark .pain-panel-title{color:#fff}
+
+.pain-panel-quote{
+  font-family:var(--f-display);font-size:clamp(17px,1.7vw,21px);
+  font-style:italic;line-height:1.4;color:var(--accent);
+  border-left:2px solid var(--accent);padding-left:18px;
+  margin:0 0 24px;max-width:48ch;
+}
+
+.pain-panel-body{
+  font-size:16px;line-height:1.6;color:var(--ink-dim);
+  margin:0 0 24px;
+}
+.dark .pain-panel-body{color:#d6d3cb}
+
+.pain-panel-source{
+  padding-top:14px;border-top:1px solid var(--rule-light);
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.04em;
+  line-height:1.5;color:var(--ink-dim);opacity:0.7;max-width:48ch;
+}
+.dark .pain-panel-source{border-top-color:rgba(255,255,255,0.08);color:#8a8780;opacity:0.85}
+
+@media (max-width:880px){
+  .pain-tabs{grid-template-columns:1fr;gap:24px}
+  .pain-tablist{
+    flex-direction:row;border-left:none;border-bottom:1px solid var(--rule-light);
+    overflow-x:auto;padding-bottom:0;position:static;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .pain-tablist::-webkit-scrollbar{display:none}
+  .dark .pain-tablist{border-bottom-color:rgba(255,255,255,0.10)}
+  .pain-tab{
+    border-left:none;border-bottom:2px solid transparent;
+    margin-left:0;margin-bottom:-1px;
+    flex-direction:column;gap:4px;align-items:flex-start;
+    padding:12px 14px;flex-shrink:0;min-width:130px;
+  }
+  .pain-tab.is-active{border-left-color:transparent;border-bottom-color:var(--accent)}
+  .pain-panels{min-height:auto}
 }
 
 /* ========== BUNDLE COMPONENTS ========== */
@@ -633,12 +706,14 @@ body.nav-hidden .nav{
   .guarantee-seal{margin:0 auto}
   .seal-text{align-items:center}
 }
-.guarantee h2.big-title{color:#fff;margin-top:16px}
-.guarantee p{color:var(--paper);font-size:17px;line-height:1.6;max-width:62ch}
+.guarantee h2.big-title{color:#fff;margin-top:16px;margin-bottom:36px}
+.guarantee p{color:var(--paper);font-size:16px;line-height:1.6;max-width:62ch;margin:0 0 18px}
+.guarantee p:last-of-type{margin-bottom:0}
 .guarantee p strong{color:#fff;font-weight:500}
 .legal-note{
   font-size:13px;color:var(--paper-dimmer);
-  margin-top:18px;line-height:1.5;letter-spacing:0;
+  margin-top:24px !important;line-height:1.55;letter-spacing:0;
+  padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);
 }
 
 /* The Seal */
@@ -1397,7 +1472,6 @@ body.nav-hidden .nav{
 .bonus-card,
 .roadmap-card,
 .preuve-card,
-.pain-card,
 .metier-stat.is-join{
   transition:
     transform .55s cubic-bezier(.32, .72, 0, 1),
@@ -1415,11 +1489,6 @@ body.nav-hidden .nav{
 .dark .preuve-card:hover{
   box-shadow:0 30px 60px -16px rgba(0,0,0,0.45) !important;
 }
-.pain-card:hover{
-  transform:translateY(-3px) !important;
-  box-shadow:0 18px 38px -12px rgba(0,0,0,0.10) !important;
-}
-
 /* Hero video : prepare pour le parallax (JS le pilote) */
 .hero-video{
   will-change:transform;

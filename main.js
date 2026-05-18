@@ -414,3 +414,48 @@
     }, true); // capture phase pour passer avant l'ancien listener
   });
 })();
+
+/* ============ PAIN TABS (section probleme) ============ */
+(function painTabs(){
+  const tablist = document.querySelector('.pain-tablist');
+  if (!tablist) return;
+  const tabs = Array.from(tablist.querySelectorAll('.pain-tab'));
+  const panels = Array.from(document.querySelectorAll('.pain-panel'));
+
+  function activate(targetTab){
+    const idx = tabs.indexOf(targetTab);
+    if (idx < 0) return;
+    tabs.forEach((t, i) => {
+      const active = i === idx;
+      t.classList.toggle('is-active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+      t.setAttribute('tabindex', active ? '0' : '-1');
+    });
+    panels.forEach((p, i) => {
+      const active = i === idx;
+      p.classList.toggle('is-active', active);
+      if (active){ p.removeAttribute('hidden'); }
+      else { p.setAttribute('hidden', ''); }
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => activate(tab));
+  });
+
+  tablist.addEventListener('keydown', (e) => {
+    const current = document.activeElement;
+    const idx = tabs.indexOf(current);
+    if (idx < 0) return;
+    let next = -1;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
+    else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = tabs.length - 1;
+    if (next >= 0){
+      e.preventDefault();
+      tabs[next].focus();
+      activate(tabs[next]);
+    }
+  });
+})();
