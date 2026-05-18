@@ -115,6 +115,19 @@ p:last-child{margin-bottom:0}
 .lead{font-size:clamp(17px, 1.7vw, 21px);line-height:1.4;letter-spacing:-0.012em;color:var(--ink-dim);max-width:64ch}
 .dark .lead{color:var(--paper)}
 
+/* Accessibility - focus visible global */
+:focus{outline:none}
+:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:2px;
+}
+.btn-primary:focus-visible,
+.nav-cta:focus-visible,
+.cohort-cta:focus-visible{
+  outline-offset:4px;
+}
+
 /* Eyebrow */
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
