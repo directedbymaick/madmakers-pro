@@ -1,16 +1,17 @@
 # Heavy / backup video files - keep local only, don't push to git
 # (the active hero-video-loop.mp4 and footer video loop.mp4 ARE tracked)
-assets/*.bk.mp4
-assets/*.original.mp4
-assets/hero-video-loop (2).mp4
-assets/cosmos_*.mp4
-assets/montage-hero-background-loop.mp4
+carnet-plein/site/assets/*.bk.mp4
+carnet-plein/site/assets/*.original.mp4
+carnet-plein/site/assets/hero-video-loop (2).mp4
+carnet-plein/site/assets/cosmos_*.mp4
+carnet-plein/site/assets/montage-hero-background-loop.mp4
 
-# Local user-side image dumps - not part of the production build
-uploads/
+# Other local projects and working material
+projects/
+workspace/
 
-# Local development docs / skills (Claude Code authoring helpers)
-skills/
+# Local development skills and helpers
+tools/skills/
 
 # Dependencies (none currently, future-proof)
 node_modules/
@@ -30,3 +31,14 @@ Thumbs.db
 
 # Logs
 *.log
+.gstack/
+
+# Internal / confidential material - never publish to the public repo
+carnet-plein/internal/
+carnet-plein/tools/
+Executive_Diagnostic_ARMD.html
+Executive_Diagnostic_ARMD_EN.html
+
+# Python bytecode
+__pycache__/
+*.pyc
