@@ -1,5 +1,24 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/", "destination": "/carnet-plein/site/index.html" },
+    { "source": "/vague-pilote", "destination": "/carnet-plein/site/vague-pilote.html" },
+    { "source": "/deploiement-90-jours", "destination": "/carnet-plein/site/deploiement-90-jours.html" },
+    { "source": "/mentions-legales", "destination": "/carnet-plein/site/mentions-legales.html" },
+    { "source": "/politique-confidentialite", "destination": "/carnet-plein/site/politique-confidentialite.html" },
+    { "source": "/assets/:path*", "destination": "/carnet-plein/site/assets/:path*" },
+    { "source": "/styles.css", "destination": "/carnet-plein/site/styles.css" },
+    { "source": "/main.js", "destination": "/carnet-plein/site/main.js" },
+    { "source": "/cookie-consent.js", "destination": "/carnet-plein/site/cookie-consent.js" },
+    { "source": "/robots.txt", "destination": "/carnet-plein/site/robots.txt" },
+    { "source": "/sitemap.xml", "destination": "/carnet-plein/site/sitemap.xml" },
+    { "source": "/favicon.svg", "destination": "/carnet-plein/site/favicon.svg" },
+    { "source": "/favicon-32.png", "destination": "/carnet-plein/site/favicon-32.png" },
+    { "source": "/favicon-192.png", "destination": "/carnet-plein/site/favicon-192.png" },
+    { "source": "/favicon-512.png", "destination": "/carnet-plein/site/favicon-512.png" },
+    { "source": "/apple-touch-icon.png", "destination": "/carnet-plein/site/apple-touch-icon.png" },
+    { "source": "/:path*", "destination": "/api/404.js" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -14,7 +33,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
+          "value": "DENY"
         },
         {
           "key": "Referrer-Policy",
@@ -25,8 +44,12 @@
           "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
         },
         {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.bunny.net; font-src 'self' https://fonts.bunny.net data:; img-src 'self' data: blob: https:; media-src 'self' blob: https://pub-381edcf9bbfb471882a8efc342f37d57.r2.dev; connect-src 'self' https://pub-381edcf9bbfb471882a8efc342f37d57.r2.dev https://www.google-analytics.com https://*.analytics.google.com https://www.clarity.ms https://*.clarity.ms; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto: tel:; object-src 'none'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.bunny.net; font-src 'self' https://fonts.bunny.net data:; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com; media-src 'self' blob: https://pub-381edcf9bbfb471882a8efc342f37d57.r2.dev; connect-src 'self' https://pub-381edcf9bbfb471882a8efc342f37d57.r2.dev https://www.google-analytics.com https://*.analytics.google.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto: tel:; object-src 'none'; upgrade-insecure-requests"
         }
       ]
     },
@@ -43,7 +66,7 @@
       ]
     },
     {
-      "source": "/(styles.css|main.js)",
+      "source": "/(styles.css|main.js|cookie-consent.js)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]

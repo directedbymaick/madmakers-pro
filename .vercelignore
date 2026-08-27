@@ -1,6 +1,9 @@
-# Dev-only utilities - never ship these to production
-serve.py
-faststart.py
+# Internal workspace material and local tooling - never ship these to production
+carnet-plein/internal/
+carnet-plein/tools/
+projects/
+tools/
+workspace/
 
 # Backup / non-faststart video files - keep them locally, don't deploy
 assets/*.bk.mp4
@@ -18,8 +21,6 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Local user uploads (if any)
-uploads/
-
-# Skills folder (local development docs)
-skills/
+# Local tool configuration
+.claude/
+.gstack/
