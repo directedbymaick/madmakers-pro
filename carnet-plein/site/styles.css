@@ -4,24 +4,10 @@
    ========================================================= */
 
 /* ========== FONTS ==========
-   AeonikPro + DotConnect (custom, .woff2 dans assets/fonts/).
-   Fallback : Geist (Bunny Fonts) + Geist Mono.
-   Voir assets/fonts/README.md pour licence et drop-in. */
-@font-face{
-  font-family:'AeonikPro';
-  src:url('assets/fonts/AeonikPro-Regular.woff2') format('woff2');
-  font-weight:400;font-style:normal;font-display:swap;
-}
-@font-face{
-  font-family:'AeonikPro';
-  src:url('assets/fonts/AeonikPro-Medium.woff2') format('woff2');
-  font-weight:500;font-style:normal;font-display:swap;
-}
-@font-face{
-  font-family:'DotConnect';
-  src:url('assets/fonts/DotConnect-Medium.woff2') format('woff2');
-  font-weight:500;font-style:normal;font-display:swap;
-}
+   Geist + Geist Mono (Bunny Fonts) servent de police du site.
+   AeonikPro et DotConnect (licences commerciales) ne sont pas dans le dépôt : leurs @font-face
+   renvoyaient 3 erreurs 404 par page. Pour les réactiver, ajouter les .woff2 dans assets/fonts/
+   et remettre les déclarations @font-face (voir assets/fonts/README.md). */
 
 /* ========== TOKENS ========== */
 :root{
@@ -34,6 +20,11 @@
   --accent: #e0541b;
   --accent-hover: #c8471a;
   --accent-soft: rgba(224, 84, 27, 0.12);
+  /* Variantes accessibles (WCAG AA) de l'orange de marque */
+  --accent-ink: #a8380f;      /* petit texte orange sur fond clair : ≥ 4,58:1 sur blanc, papier et papier chaud */
+  --accent-btn: #c2410c;      /* fond des boutons, texte blanc : 5,18:1 */
+  --accent-on-dark: #ef6b35;  /* petit texte orange sur fond sombre : ≥ 5,48:1 */
+  --muted-on-dark: #8f8c85;   /* libellés gris sur fond sombre : ≥ 5:1 */
   --ink: #1a1c18;
   --ink-dim: #3a3d36;
   --paper: #e8e6df;
@@ -819,11 +810,11 @@ body.nav-hidden .nav{
   background:var(--accent-soft);color:var(--accent);
   padding:4px 9px;border-radius:999px;font-size:10.5px;
 }
-.bonus-card h4{
-  font-family:var(--f-display);font-size:21px;line-height:1.2;
+.bonus-card h3{
+  font-family:var(--f-display);font-size:21px;line-height:1.2;letter-spacing:0;
   margin-top:2px;color:var(--encre);
 }
-.dark .bonus-card h4{color:#fff}
+.dark .bonus-card h3{color:#fff}
 .bonus-card p{font-size:14.5px;line-height:1.5;color:var(--ink-dim);margin-top:4px}
 .dark .bonus-card p{color:var(--paper)}
 
@@ -832,7 +823,7 @@ body.nav-hidden .nav{
 .tools-included .bonus-card{min-height:0}
 .tools-included .bonus-mockup{display:none}
 .tools-included .bonus-body{padding:22px 20px 24px}
-.tools-included .bonus-card h4{font-size:19px}
+.tools-included .bonus-card h3{font-size:19px}
 .tools-included .bonus-card p{font-size:13.5px}
 @media (max-width:980px){.tools-included .bonus-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.tools-included .bonus-grid{grid-template-columns:1fr}.tools-included .bonus-body{padding:20px}}
@@ -1447,4 +1438,41 @@ body.nav-hidden .nav{
   }
   .cookie-banner-text{font-size:12.5px}
   .cookie-banner-btn{padding:8px 16px;font-size:11.5px}
+}
+
+/* =========================================================
+   ACCESSIBILITÉ — contrastes et cibles tactiles (audit oct. 2026)
+   Les grands titres gardent --accent (≥ 3:1 suffit au-delà de 24 px).
+   ========================================================= */
+/* Boutons orange à texte blanc */
+html .btn-primary{background:var(--accent-btn)}
+html .btn-primary:hover{background:var(--accent-ink)}
+/* Petit texte orange sur fond clair */
+.cream .eyebrow,
+.fit-no .fit-head span,
+.system-flow-foot span,
+.bonus-num,
+.bonus-value,
+.faq-num,
+html .deploy-when{color:var(--accent-ink)}
+/* « by Mad Makers » : la barre de navigation translucide peut virer au gris (#c0bfbc) */
+.brand-name b{color:#832b0b}
+.fit-yes .fit-head span{color:var(--accent-on-dark)}
+/* Petit texte sur fond sombre */
+.dark .pain-tab .pain-tab-num,
+.foot-col.contact .lbl{color:var(--muted-on-dark)}
+.cookie-banner-text a{color:var(--accent-on-dark)}
+html .contrepartie-block h3{color:var(--accent-on-dark)}
+/* Liens dans le texte : distingués autrement que par la couleur (WCAG 1.4.1) */
+html .methodo-page p a{text-decoration:underline;text-underline-offset:3px}
+
+/* Cibles tactiles ≥ 44 px sur écran tactile */
+@media (pointer:coarse){
+  .nav-burger{min-width:44px;min-height:44px}
+  .preuve-linkedin{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+  .pilote-banner{min-height:44px}
+  .hero-scroll-hint,
+  .foot-col a,
+  .legal-foot a,
+  .backlink{display:inline-flex;align-items:center;min-height:44px}
 }

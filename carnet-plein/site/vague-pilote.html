@@ -75,7 +75,7 @@
 
 <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
 <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" />
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261013">
 
 <style>
   .pilote-page{background:var(--encre);color:var(--paper);min-height:100vh;position:relative;overflow-x:hidden}
@@ -136,7 +136,7 @@
   .deal-list li::before{content:"→";position:absolute;left:0;top:8px;color:var(--accent);font-weight:600}
 
   .contrepartie-block{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px;margin-top:48px}
-  .contrepartie-block h4{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:0.14em;color:var(--accent);text-transform:uppercase;margin:0 0 16px}
+  .contrepartie-block h3{letter-spacing:0;font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:0.14em;color:var(--accent);text-transform:uppercase;margin:0 0 16px}
   .contrepartie-block ul{list-style:none;padding:0;margin:0}
   .contrepartie-block li{padding:6px 0 6px 24px;position:relative;font-size:14.5px;line-height:1.55;color:#e8e6df}
   .contrepartie-block li::before{content:"·";position:absolute;left:8px;top:2px;color:var(--accent);font-size:22px;font-weight:700;line-height:1}
@@ -145,13 +145,13 @@
   @media (max-width:780px){.guarantee-grid{grid-template-columns:1fr}}
   .guarantee-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px}
   .guarantee-num{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:0.14em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
-  .guarantee-card h4{font-size:20px;font-weight:500;color:#fff;margin:0 0 12px;line-height:1.25}
+  .guarantee-card h3{letter-spacing:0;font-size:20px;font-weight:500;color:#fff;margin:0 0 12px;line-height:1.25}
   .guarantee-card p{font-size:14.5px;line-height:1.55;color:#d6d3cb;margin:0}
 
   .pilote-cta{padding:80px 0;text-align:center;background:linear-gradient(180deg,rgba(224,84,27,0.10),transparent 80%);border-top:1px solid rgba(224,84,27,0.30)}
   .pilote-cta h2{font-size:clamp(32px,5vw,60px);color:#fff;margin-bottom:24px;max-width:none}
   .pilote-cta p{font-size:17px;line-height:1.55;color:#d6d3cb;max-width:54ch;margin:0 auto 32px}
-  .pilote-cta .btn-primary{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#fff;padding:18px 32px;border-radius:999px;font-family:var(--f-cta);font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none;transition:background .2s,transform .2s}
+  .pilote-cta .btn-primary{display:inline-flex;align-items:center;gap:12px;background:var(--accent-btn);color:#fff;padding:18px 32px;border-radius:999px;font-family:var(--f-cta);font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none;transition:background .2s,transform .2s}
   .pilote-cta .btn-primary:hover{background:var(--accent-hover,#d04a18);transform:translateY(-1px)}
 
   .backlink{font-family:var(--f-mono);font-size:12px;letter-spacing:0.08em;color:#a9a69f;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:8px;margin-bottom:48px}
@@ -225,7 +225,7 @@
     </div>
 
     <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
-      <a class="btn-primary" href="https://calendly.com/directedbymaick/audit-carnet-plein" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#fff;padding:18px 32px;border-radius:999px;font-family:var(--f-cta);font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none">
+      <a class="btn-primary" href="https://calendly.com/directedbymaick/audit-carnet-plein" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:var(--accent-btn);color:#fff;padding:18px 32px;border-radius:999px;font-family:var(--f-cta);font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none">
         Analyser ma présence locale <span aria-hidden="true">↗</span>
       </a>
       <a href="#deal" style="color:#d6d3cb;font-family:var(--f-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;padding:8px 0">Voir le détail de l'accord ↓</a>
@@ -266,7 +266,7 @@
         <p style="color:#d6d3cb;font-size:15px;line-height:1.55;margin-top:8px">Vous acceptez que le point de départ, les actions réalisées et les résultats validés ensemble puissent alimenter une étude de cas. Le périmètre de cette communication est défini au contrat avant le démarrage.</p>
 
         <div class="contrepartie-block">
-          <h4>Éléments pouvant être autorisés</h4>
+          <h3>Éléments pouvant être autorisés</h3>
           <ul>
             <li>Nom de votre entreprise utilisable dans nos communications</li>
             <li>Ville et zone d'intervention publiables</li>
@@ -295,25 +295,25 @@
 
       <article class="guarantee-card">
         <div class="guarantee-num">ENGAGEMENT 01</div>
-        <h4>Protection contractuelle du premier mois</h4>
+        <h3>Protection contractuelle du premier mois</h3>
         <p>Le délai, la procédure et le périmètre d’un éventuel remboursement sont détaillés dans la proposition et repris au contrat.</p>
       </article>
 
       <article class="guarantee-card">
         <div class="guarantee-num">ENGAGEMENT 02</div>
-        <h4>Paiement en 2 fois (50 / 50)</h4>
+        <h3>Paiement en 2 fois (50 / 50)</h3>
         <p>Le paiement initial est réparti en deux échéances : 750 € HT à la signature, puis 750 € HT après validation de la mise en ligne du site, de la fiche Google et du système d’avis.</p>
       </article>
 
       <article class="guarantee-card">
         <div class="guarantee-num">ENGAGEMENT 03</div>
-        <h4>Tarif fondateur conservé dans la durée</h4>
+        <h3>Tarif fondateur conservé dans la durée</h3>
         <p>Après les douze mois, l’accompagnement peut s’arrêter ou se poursuivre à 250 € HT par mois selon le périmètre prévu au contrat.</p>
       </article>
 
       <article class="guarantee-card">
         <div class="guarantee-num">ENGAGEMENT 04</div>
-        <h4>Conditions de prolongation définies</h4>
+        <h3>Conditions de prolongation définies</h3>
         <p>Les indicateurs, la méthode de mesure et les conditions d’une éventuelle prolongation gratuite, limitée à six mois, sont précisés au contrat. Nous ne garantissons ni position Google ni volume fixe de demandes.</p>
       </article>
 
@@ -359,7 +359,7 @@
       </article>
 
       <article class="deal-card">
-        <div class="deal-card-eyebrow" style="color:#c43c2a">IL N’EST PAS ADAPTÉ SI</div>
+        <div class="deal-card-eyebrow" style="color:#e86a57">IL N’EST PAS ADAPTÉ SI</div>
         <ul class="deal-list" style="margin-top:16px">
           <li>Vous recherchez un test de quelques semaines sans cycle de déploiement ni suivi</li>
           <li>Vous ne souhaitez autoriser aucune forme d’étude de cas, même dans un cadre défini ensemble</li>
@@ -392,6 +392,6 @@
   </div>
 </footer>
 
-<script src="main.js" defer></script>
+<script src="main.js?v=20261013" defer></script>
 </body>
 </html>

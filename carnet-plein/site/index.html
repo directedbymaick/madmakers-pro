@@ -215,7 +215,7 @@
 <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
 <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" />
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261013">
 </head>
 <body class="has-banner">
 
@@ -249,11 +249,14 @@
 <!-- ================ HERO ================ -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <video class="hero-video" src="https://pub-381edcf9bbfb471882a8efc342f37d57.r2.dev/hero-metiers-background.mp4"
-           autoplay muted loop playsinline preload="metadata"
+    <!-- Boucle hero : 480p (≈1 Mo) sur mobile, 720p (≈3 Mo) au-delà, sans piste audio.
+         Pas de lecture si « réduire les animations » ou économie de données (main.js). -->
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata"
            poster="assets/metiers/electrician-fixing.webp?v=20260514"
-           fetchpriority="high"
-           aria-hidden="true"></video>
+           aria-hidden="true">
+      <source src="assets/video/hero-metiers-480.mp4?v=20261013" type="video/mp4" media="(max-width: 767px)">
+      <source src="assets/video/hero-metiers-720.mp4?v=20261013" type="video/mp4">
+    </video>
     <div class="hero-tint"></div>
   </div>
   <div class="container hero-inner">
@@ -535,34 +538,34 @@
       <p style="font-size:15.5px;line-height:1.55;color:#d6d3cb;max-width:68ch;margin-bottom:18px">Carnet Plein est actuellement proposé à <strong style="color:#fff">1 500 € HT à la signature puis 250 € HT par mois pendant 12 mois, soit 4 500 € HT au total</strong>. Ce tarif accompagne le lancement du service et n’a pas vocation à devenir une troisième formule permanente.</p>
       <p style="font-size:14px;line-height:1.55;color:#a9a69f;max-width:68ch;margin:0 0 32px">En contrepartie, le projet peut faire l’objet d’une étude de cas documentée. Les informations utilisables, les validations nécessaires et les conditions de l’accompagnement sont définies par écrit avant la signature.</p>
 
-      <h4 hidden style="font-size:18px;font-weight:500;color:#fff;margin:0 0 18px;line-height:1.25">Les quatre engagements qui encadrent cette offre temporaire</h4>
+      <h3 hidden style="font-size:18px;font-weight:500;color:#fff;margin:0 0 18px;line-height:1.25;letter-spacing:0">Les quatre engagements qui encadrent cette offre temporaire</h3>
 
       <div hidden style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:24px" class="guarantee-grid-pilote">
         <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:24px;backdrop-filter:blur(8px)">
           <div style="font-family:var(--f-mono);font-size:10.5px;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:10px">ENGAGEMENT 01</div>
-          <h4 style="font-size:18px;font-weight:500;color:#fff;margin:0 0 8px;line-height:1.25">Protection contractuelle du premier mois</h4>
+          <h3 style="font-size:18px;font-weight:500;color:#fff;margin:0 0 8px;line-height:1.25;letter-spacing:0">Protection contractuelle du premier mois</h3>
           <p style="font-size:14px;line-height:1.55;color:#d6d3cb;margin:0">Le délai, la procédure et le périmètre d’un éventuel remboursement sont communiqués par écrit avant la signature.</p>
         </div>
         <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:24px;backdrop-filter:blur(8px)">
           <div style="font-family:var(--f-mono);font-size:10.5px;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:10px">ENGAGEMENT 02</div>
-          <h4 style="font-size:18px;font-weight:500;color:#fff;margin:0 0 8px;line-height:1.25">Paiement en 2 fois (50 / 50)</h4>
+          <h3 style="font-size:18px;font-weight:500;color:#fff;margin:0 0 8px;line-height:1.25;letter-spacing:0">Paiement en 2 fois (50 / 50)</h3>
           <p style="font-size:14px;line-height:1.55;color:#d6d3cb;margin:0">Le paiement initial est réparti en deux échéances : 750 € HT à la signature, puis 750 € HT après validation de la mise en ligne.</p>
         </div>
         <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:24px;backdrop-filter:blur(8px)">
           <div style="font-family:var(--f-mono);font-size:10.5px;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:10px">ENGAGEMENT 03</div>
-          <h4 style="font-size:18px;font-weight:500;color:#fff;margin:0 0 8px;line-height:1.25">Tarif fondateur conservé</h4>
+          <h3 style="font-size:18px;font-weight:500;color:#fff;margin:0 0 8px;line-height:1.25;letter-spacing:0">Tarif fondateur conservé</h3>
           <p style="font-size:14px;line-height:1.55;color:#d6d3cb;margin:0">Si l’accompagnement se poursuit après les douze mois, la mensualité reste à 250 € HT selon le périmètre prévu au contrat.</p>
         </div>
         <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:24px;backdrop-filter:blur(8px)">
           <div style="font-family:var(--f-mono);font-size:10.5px;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:10px">ENGAGEMENT 04</div>
-          <h4 style="font-size:18px;font-weight:500;color:#fff;margin:0 0 8px;line-height:1.25">Bilan documenté à 12 mois</h4>
+          <h3 style="font-size:18px;font-weight:500;color:#fff;margin:0 0 8px;line-height:1.25;letter-spacing:0">Bilan documenté à 12 mois</h3>
           <p style="font-size:14px;line-height:1.55;color:#d6d3cb;margin:0">Nous comparons les indicateurs de départ aux résultats observés et définissons les prochaines optimisations à partir des données.</p>
         </div>
       </div>
 
       <p hidden style="font-size:13.5px;color:#a9a69f;line-height:1.55;margin:24px 0 0;font-style:italic">À savoir : l’accompagnement fondateur est prévu sur douze mois afin de déployer, mesurer et améliorer le système sur un cycle complet. Les modalités de paiement, de rétractation, de résiliation et de remboursement applicables sont celles du contrat signé.</p>
 
-      <a href="/vague-pilote.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:#fff;padding:16px 28px;border-radius:999px;font-family:var(--f-cta);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none;margin-top:24px">
+      <a href="/vague-pilote.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:12px;background:var(--accent-btn);color:#fff;padding:16px 28px;border-radius:999px;font-family:var(--f-cta);font-weight:500;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none;margin-top:24px">
         Voir l'offre fondateur <span aria-hidden="true">↗</span>
       </a>
     </div>
@@ -594,7 +597,7 @@
             <span class="bonus-num">OUTIL #1</span>
             <span class="bonus-value">INCLUS</span>
           </div>
-          <h4>Checklist fiche Google</h4>
+          <h3>Checklist fiche Google</h3>
           <p>Une checklist claire pour vérifier les informations, services, photos, avis et zones desservies de votre fiche Google.</p>
         </div>
       </article>
@@ -608,7 +611,7 @@
             <span class="bonus-num">OUTIL #2</span>
             <span class="bonus-value">INCLUS</span>
           </div>
-          <h4>Modèles de réponses aux avis</h4>
+          <h3>Modèles de réponses aux avis</h3>
           <p>Trente réponses adaptables aux avis positifs, mitigés ou négatifs, pour répondre régulièrement et avec le bon ton.</p>
         </div>
       </article>
@@ -622,7 +625,7 @@
             <span class="bonus-num">OUTIL #3</span>
             <span class="bonus-value">INCLUS</span>
           </div>
-          <h4>Guide photo chantier</h4>
+          <h3>Guide photo chantier</h3>
           <p>Une vidéo courte et une checklist pour produire au smartphone des photos nettes, cohérentes et faciles à exploiter.</p>
         </div>
       </article>
@@ -636,7 +639,7 @@
             <span class="bonus-num">OUTIL #4</span>
             <span class="bonus-value">INCLUS</span>
           </div>
-          <h4>Trame de devis claire</h4>
+          <h3>Trame de devis claire</h3>
           <p>Un modèle plus clair pour présenter les travaux, justifier le prix, mettre en avant vos garanties et faciliter la comparaison.</p>
         </div>
       </article>
@@ -657,7 +660,7 @@
     <div class="formules-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px">
 
       <article class="formule-card" style="background:#fff;border:1px solid var(--rule-strong);border-radius:24px;padding:36px 32px;position:relative">
-        <div style="font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:0.14em;color:var(--accent);text-transform:uppercase;margin-bottom:10px">Formule recommandée</div>
+        <div style="font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:0.14em;color:var(--accent-ink);text-transform:uppercase;margin-bottom:10px">Formule recommandée</div>
         <h3 style="font-size:32px;font-weight:600;margin-bottom:6px;letter-spacing:-0.02em;color:var(--encre)">Carnet Plein® <em style="color:var(--accent);font-style:italic">Intégral</em></h3>
         <p style="color:var(--ink-dim);font-size:14.5px;line-height:1.55;margin-bottom:24px;max-width:36ch">Pour les artisans sans site, ou avec un site daté à refaire ou optimiser. Le périmètre complet est pris en charge.</p>
 
@@ -702,7 +705,7 @@
         </div>
 
         <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:1.6;color:var(--encre)">
-          <li style="padding:8px 0 8px 26px;position:relative;opacity:0.45;text-decoration:line-through"><span style="position:absolute;left:0;top:8px;color:var(--ink-dim);font-weight:700">×</span> Site web + pages services géolocalisées (votre site reste tel quel)</li>
+          <li style="padding:8px 0 8px 26px;position:relative;color:#66645f;text-decoration:line-through"><span style="position:absolute;left:0;top:8px;color:var(--ink-dim);font-weight:700">×</span> Site web + pages services géolocalisées (votre site reste tel quel)</li>
           <li style="padding:8px 0 8px 26px;position:relative"><span style="position:absolute;left:0;top:8px;color:var(--accent);font-weight:700">→</span> Google Business Profile + SEO local</li>
           <li style="padding:8px 0 8px 26px;position:relative"><span style="position:absolute;left:0;top:8px;color:var(--accent);font-weight:700">→</span> Système d'avis Google automatisé</li>
           <li style="padding:8px 0 8px 26px;position:relative"><span style="position:absolute;left:0;top:8px;color:var(--accent);font-weight:700">→</span> Rapport mensuel PDF</li>
@@ -1013,8 +1016,8 @@
 
 <!-- ================ FOOTER CTA ================ -->
 <section class="footer-cta" id="contact">
-  <video class="footer-cta-video" src="assets/footer-loop.mp4?v=20260514"
-         autoplay muted loop playsinline preload="none"
+  <video class="footer-cta-video" src="assets/footer-loop.mp4?v=20261013"
+         muted loop playsinline preload="none"
          aria-hidden="true"></video>
   <div class="footer-cta-tint"></div>
   <div class="container footer-cta-inner">
@@ -1103,7 +1106,7 @@
   </svg>
 </button>
 
-<script src="main.js" defer></script>
+<script src="main.js?v=20261013" defer></script>
 
 <!-- ================ COOKIE CONSENT BANNER + TRACKING (RGPD) ================ -->
 <!--

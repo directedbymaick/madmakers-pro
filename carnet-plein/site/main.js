@@ -133,8 +133,18 @@
   /* ---------- Lazy hero video (pause when out of viewport) ---------- */
   const heroVideo = document.querySelector('.hero-video');
   const footerVideo = document.querySelector('.footer-cta-video');
+  // Mouvement réduit ou économie de données : aucune lecture, l'image d'attente reste affichée
+  const noVideo = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    !!(navigator.connection && navigator.connection.saveData);
   [heroVideo, footerVideo].forEach((video) => {
-    if (!video || !('IntersectionObserver' in window)) return;
+    if (!video) return;
+    if (noVideo) {
+      video.removeAttribute('autoplay');
+      video.preload = 'none';
+      video.pause();
+      return;
+    }
+    if (!('IntersectionObserver' in window)) return;
     const vio = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
